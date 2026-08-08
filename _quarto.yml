@@ -47,7 +47,7 @@ website:
     foreground: white
     logo: assets/images/geoepi_logo_xsm.png
     logo-alt: "GeoEpi"
-    logo-href: https://geoepi.github.io/
+    logo-href: https://geoepi.github.io/geoepi-notebook/
     left:
       - text: "Start Here"
         href: start/index.qmd
