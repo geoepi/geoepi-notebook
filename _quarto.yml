@@ -36,8 +36,8 @@ website:
   title: "GeoEpi Lab Book"
   description: "Practical guidance for organizing collaborative geographical epidemiology."
   favicon: assets/images/favicon.ico
-  site-url: "https://jmhumphreys.github.io/geoepi-notebook/"
-  repo-url: "https://github.com/JMHumphreys/geoepi-notebook"
+  site-url: "https://geoepi.github.io/geoepi-notebook/"
+  repo-url: "https://github.com/geoepi/geoepi-notebook"
   repo-actions: [edit, issue, source]
   reader-mode: true
   page-navigation: true
@@ -73,7 +73,7 @@ website:
           - text: "Contributing"
             href: about/contributing.qmd
       - icon: github
-        href: https://github.com/JMHumphreys/geoepi-notebook
+        href: https://github.com/geoepi/geoepi-notebook
         aria-label: GitHub repository
       - text: "GeoEpi"
         menu:
