@@ -21,9 +21,8 @@ REQUIRED_TEMPLATES = {
 ANALYTICAL_GUIDE_URLS = (
     "https://hankstevens.github.io/Primer-of-Ecology/index.html",
     "https://www.quantitative-biology.ca/",
-    "https://frec-5174c.github.io/eco4cast-in-R-book/",
-    "https://keen-swartz-3146c.netlify.app/",
-    "https://mgimond.github.io/Spatial/coordinate-systems-in-r.html",
+    "https://frec-5174.github.io/eco4cast-in-R-book/",
+    "https://mgimond.github.io/Spatial/",
     "https://jguelat.github.io/spatial-r/",
     "https://r.geocompx.org/",
     "https://xcelab.net/rm/statistical-rethinking/",
