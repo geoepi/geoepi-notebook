@@ -70,7 +70,7 @@ These online books, manuals, and course materials are useful references for anal
 ### Integrated Laplace Approximation
 
 - [Dynamic Time Series Models using R-INLA](https://ramanbala.github.io/dynamic-time-series-models-R-INLA/) - use of an approximate Bayesian methods with R-INLA for dynamic modeling of time series.
-- [Spatial SPDE Models](hhttps://becarioprecario.bitbucket.io/spde-gitbook/) - spatial Modeling with Stochastic Partial Differential Equations Using R and INLA.
+- [Spatial SPDE Models](https://becarioprecario.bitbucket.io/spde-gitbook/) - spatial Modeling with Stochastic Partial Differential Equations Using R and INLA.
 
 ### Software development, HPCs, and computer science
 
