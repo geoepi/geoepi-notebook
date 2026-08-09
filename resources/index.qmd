@@ -30,12 +30,13 @@ These online books, manuals, and course materials are useful references for anal
 
 - [Primer of Ecology](https://hankstevens.github.io/Primer-of-Ecology/index.html) - ecological modeling and quantitative population concepts.
 - [Quantitative Biology](https://www.quantitative-biology.ca/) - quantitative biology concepts and worked examples.
-- [A Practical Guide to Ecosystem Forecasting](https://frec-5174c.github.io/eco4cast-in-R-book/) - ecological forecasting workflows.
+- [A Practical Guide to Ecosystem Forecasting](https://frec-5174.github.io/eco4cast-in-R-book/) - ecological forecasting workflows.
+- [Forecasting: Principles and Practice](https://otexts.com/fpp2/) - forecasting workflows with the forecast package in R.
 
 ### Spatial analysis and geocomputation
 
-- [Spatial Data Science](https://keen-swartz-3146c.netlify.app/) - spatial analysis workflows and concepts.
-- [R | Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/coordinate-systems-in-r.html) - introductory GIS and spatial analysis in R.
+- [Spatial Data Science](https://r-spatial.org/book/) - spatial analysis workflows and concepts.
+- [R | Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/) - introductory GIS and spatial analysis in R.
 - [Spatial Data Processing with R](https://jguelat.github.io/spatial-r/) - spatial data processing workflows in R.
 - [Geocomputation with R](https://r.geocompx.org/) - geocomputation and spatial data science in R.
 
@@ -43,13 +44,15 @@ These online books, manuals, and course materials are useful references for anal
 
 - [Rethinking](https://xcelab.net/rm/statistical-rethinking/) - Bayesian statistical modeling and model reasoning.
 - [Comparative Methods](https://bookdown.org/bomeara/comparative-methods/) - comparative methods and phylogenetic analysis concepts.
+- [Non-Gaussian Models in Stan](https://rafaelcabral96.github.io/nigstan/) -  using CmdStanR interface to fit Stan models.
+- [Prior Choice Recommendations](https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations) -  Choosing Bayesian priors, especially in Stan.
 
 ### Population, landscape, and computational genetics
 
 - [Landscape Genetic Data Analysis with R](https://bookdown.org/hhwagner1/LandGenCourse_book/) - population and landscape genetic analysis.
 - [Applied Population Genetics](https://dyerlab.github.io/applied_population_genetics/index.html) - applied population genetics workflows.
 - [Molecular Epi in R](https://gtpb.github.io/MEVR16/index.html) - molecular epidemiology analysis in R.
-- [ComputationalGenomicsManual](https://linsalrob.github.io/ComputationalGenomicsManual/) - computational genomics methods and implementation.
+- [Computational Genomics Manual](https://linsalrob.github.io/ComputationalGenomicsManual/) - computational genomics methods and implementation.
 
 ### Epidemiology
 
@@ -59,3 +62,17 @@ These online books, manuals, and course materials are useful references for anal
 
 - [Network Analysis in R](https://yunranchen.github.io/intro-net-r/index.html) - network methods and implementation in R.
 - [Network Analysis: Integrating Social Network Theory, Method, and Application with R](https://inarwhal.github.io/NetworkAnalysisR-book/) - network theory and applied analysis in R.
+
+### Causal analysis
+
+- [Causal Inference in R](https://www.r-causal.org/) - answering causal questions using R.
+
+### Integrated Laplace Approximation
+
+- [Dynamic Time Series Models using R-INLA](https://ramanbala.github.io/dynamic-time-series-models-R-INLA/) - use of an approximate Bayesian methods with R-INLA for dynamic modeling of time series.
+- [Spatial SPDE Models](hhttps://becarioprecario.bitbucket.io/spde-gitbook/) - spatial Modeling with Stochastic Partial Differential Equations Using R and INLA.
+
+### Software development, HPCs, and computer science
+
+- [Applied HPC with R](https://book-hpc.ggvy.cl/) - applied HPC with R is a collection of talks and lectures about speeding up your R code parallel computing and other resources.
+- [R Packages (2e)](https://r-pkgs.org/) - 2nd edition of R Packages by Hadley Wickham. Functional programing and paackage design.
