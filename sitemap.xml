@@ -2,94 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/about/contributing.html</loc>
-    <lastmod>2026-08-09T23:18:40.011Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.151Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/about/purpose.html</loc>
-    <lastmod>2026-08-09T23:18:40.011Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.151Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/templates/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/tools/zotero.html</loc>
-    <lastmod>2026-08-09T23:18:40.017Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/tools/github.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/compute/repository-vs-compute.html</loc>
-    <lastmod>2026-08-09T23:18:40.015Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/compute/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.015Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/data/controlled-data.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/data/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
-    <loc>https://geoepi.github.io/geoepi-notebook/organization/projects-and-subprojects.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geoepi.github.io/geoepi-notebook/organization/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geoepi.github.io/geoepi-notebook/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
-  </url>
-  <url>
-    <loc>https://geoepi.github.io/geoepi-notebook/start/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <loc>https://geoepi.github.io/geoepi-notebook/organization/add-project-or-subproject.html</loc>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/organization/project-hub.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geoepi.github.io/geoepi-notebook/start/index.html</loc>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geoepi.github.io/geoepi-notebook/index.html</loc>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geoepi.github.io/geoepi-notebook/organization/index.html</loc>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geoepi.github.io/geoepi-notebook/organization/projects-and-subprojects.html</loc>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/organization/repositories.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/data/data-management-plans.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/data/analytical-provenance.html</loc>
-    <lastmod>2026-08-09T23:18:40.015Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.157Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/compute/atlas-ceres.html</loc>
-    <lastmod>2026-08-09T23:18:40.015Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.156Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/tools/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.017Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/tools/overleaf.html</loc>
-    <lastmod>2026-08-09T23:18:40.017Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/tools/osf.html</loc>
-    <lastmod>2026-08-09T23:18:40.017Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/resources/index.html</loc>
-    <lastmod>2026-08-09T23:18:40.016Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.158Z</lastmod>
   </url>
   <url>
     <loc>https://geoepi.github.io/geoepi-notebook/about/how-to-use.html</loc>
-    <lastmod>2026-08-09T23:18:40.011Z</lastmod>
+    <lastmod>2026-08-12T23:22:46.151Z</lastmod>
   </url>
 </urlset>

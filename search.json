@@ -24,7 +24,7 @@
     "href": "templates/index.html",
     "title": "Templates",
     "section": "",
-    "text": "These templates are starting points, not a rigid project structure. Copy them into the appropriate project or subproject location, adapt them to the work, and link to the authoritative records.\n\n\n\nTemplate\nUse\n\n\n\n\nProject overview\nProject context in a future GeoEpi Hub\n\n\nData Management Plan\nConcise project-level data-management planning\n\n\nControlled-data inventory\nMinimal project-level inventory of important controlled data\n\n\nSubproject registry\nFuture Hub links to canonical subproject repositories\n\n\nSubproject README\nOrientation and reproducibility information in a subproject repository\n\n\nGeoEpi metadata\nProposed Version 1 portfolio metadata convention for a future .geoepi.yml file\n\n\n\nThe registry and metadata files intentionally contain portfolio-level information only. subprojects.yml locates the canonical repository; .geoepi.yml reports the subproject’s current portfolio state. Run metadata belongs in the subproject repository and computational storage. Future Hub automation may read these files, but cross-repository automation is not implemented here.",
+    "text": "These templates are starting points, not a rigid project structure. Copy them into the appropriate project or subproject location, adapt them to the work, and link to the authoritative records.\n\n\n\nTemplate\nUse\n\n\n\n\nProject overview\nProject context in the operational GeoEpi Hub\n\n\nData Management Plan\nConcise project-level data-management planning\n\n\nControlled-data inventory\nMinimal project-level inventory of important controlled data\n\n\nSubproject registry\nHub links to canonical subproject repositories\n\n\nSubproject README\nOrientation and reproducibility information in a subproject repository\n\n\nGeoEpi metadata\nCurrent Version 1 portfolio metadata convention for .geoepi.yml\n\n\n\nThe registry and metadata files intentionally contain portfolio-level information only. subprojects.yml locates the canonical repository; .geoepi.yml reports the subproject’s current portfolio state. Run metadata belongs in the subproject repository and computational storage. The Hub synchronization workflow reads these files to validate registrations and generate portfolio status.",
     "crumbs": [
       "Templates"
     ]
@@ -45,7 +45,7 @@
     "href": "tools/github.html",
     "title": "GitHub",
     "section": "",
-    "text": "GeoEpi generally uses GitHub for version-controlled code, documentation, issue and review discussions, collaboration, and canonical subproject repositories. The GeoEpi organization is the normal home for lab-owned subprojects and will eventually host the lab-level Hub.\nRepositories may also live in individual accounts, forks, external upstreams, or collaborator-owned organizations. Identify one canonical working repository for each subproject so the future Hub has a stable destination.\nGitHub is not a storage system for controlled data, credentials, tokens, or large computational outputs. Use approved storage and computation environments, and link to them from the repository when appropriate.",
+    "text": "GeoEpi generally uses GitHub for version-controlled code, documentation, issue and review discussions, collaboration, and canonical subproject repositories. The GeoEpi organization is the normal home for lab-owned subprojects and hosts the operational GeoEpi Hub.\nRepositories may also live in individual accounts, forks, external upstreams, or collaborator-owned organizations. Identify one canonical working repository for each subproject so the Hub registry and synchronization workflow have one stable source.\nGitHub is not a storage system for controlled data, credentials, tokens, or large computational outputs. Use approved storage and computation environments, and link to them from the repository when appropriate.",
     "crumbs": [
       "Tools & Collaboration",
       "GitHub"
@@ -77,7 +77,7 @@
     "href": "data/controlled-data.html",
     "title": "Controlled-Data Inventory",
     "section": "",
-    "text": "The future Hub should inventory project data whose stewardship matters, such as surveillance or case detections, field-collected data, genomic or sample data, facility or premises-level data, diagnostic data, partner-provided datasets, restricted extracts, and other controlled or governed data.\nThe inventory is a map, not a copy of the data. Do not store controlled data in GitHub. For each important data asset, record a stable ID, name and description, provider, project steward, authoritative storage location, access or restriction level, applicable agreement or limitation, relevant subprojects, and current status or notes.\nPublic analytical sources do not need to be cataloged exhaustively in the Hub. Sources such as ERA5, MODIS, administrative boundaries, census data, public host or livestock surfaces, roads, and night lights should normally be documented by the subproject repository that acquires or uses them.\nUse the controlled-data inventory template for a minimal starting point. The project DMP explains how the project plans to manage data; the inventory records what is actually present.",
+    "text": "The Hub project entry should inventory project data whose stewardship matters, such as surveillance or case detections, field-collected data, genomic or sample data, facility or premises-level data, diagnostic data, partner-provided datasets, restricted extracts, and other controlled or governed data.\nThe inventory is a map, not a copy of the data. Do not store controlled data in GitHub. For each important data asset, record a stable ID, name and description, provider, project steward, authoritative storage location, access or restriction level, applicable agreement or limitation, relevant subprojects, and current status or notes.\nPublic analytical sources do not need to be cataloged exhaustively in the Hub. Sources such as ERA5, MODIS, administrative boundaries, census data, public host or livestock surfaces, roads, and night lights should normally be documented by the subproject repository that acquires or uses them.\nUse the controlled-data inventory template for a minimal starting point. The project DMP explains how the project plans to manage data; the inventory records what is actually present.",
     "crumbs": [
       "Data Management",
       "Controlled-Data Inventory"
@@ -94,67 +94,122 @@
     ]
   },
   {
-    "objectID": "organization/projects-and-subprojects.html",
-    "href": "organization/projects-and-subprojects.html",
-    "title": "Projects and Subprojects",
+    "objectID": "organization/add-project-or-subproject.html",
+    "href": "organization/add-project-or-subproject.html",
+    "title": "Add a Project or Subproject",
     "section": "",
-    "text": "A project is a broad scientific or operational objective. It may include several scientists, controlled or partner-provided data, multiple analytical workstreams, and several products.\nA subproject is an independently understandable and executable workstream. Examples include NWS climate acquisition, a Bayesian risk model, a spread simulation, genomics, or a dashboard.\nThe useful rule is approximately:\nThis is not the same as “one scientist = one repository.” A scientist may contribute to several subprojects, and a subproject may involve several scientists. Each subproject has one designated canonical working repository, even when forks, upstream repositories, or collaborator-owned repositories also exist.",
+    "text": "Use this procedure to add work to the GeoEpi Hub. The Hub describes project context and locates canonical subprojects; the subproject repository describes the science.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "Projects and Subprojects"
+      "Add a Project or Subproject"
     ]
   },
   {
-    "objectID": "organization/projects-and-subprojects.html#where-information-belongs",
-    "href": "organization/projects-and-subprojects.html#where-information-belongs",
-    "title": "Projects and Subprojects",
-    "section": "Where information belongs",
-    "text": "Where information belongs\n\nProject level: objective, scope, roles, decisions, milestones, controlled-data stewardship, and products.\nSubproject level: scientific implementation, workflow entry points, public data acquisition, code, analytical provenance, and reproducibility notes.\nRun level: exact configuration and execution records for a particular analysis or computational run.\n\nUse the subproject README template and proposed Version 1 .geoepi.yml template when setting up a repository. The metadata file is a small future convention, not a replacement for the README or run records.",
+    "objectID": "organization/add-project-or-subproject.html#add-a-new-project",
+    "href": "organization/add-project-or-subproject.html#add-a-new-project",
+    "title": "Add a Project or Subproject",
+    "section": "Add a new project",
+    "text": "Add a new project\n\nChoose a stable lowercase project_id that matches ^[a-z0-9]+(?:-[a-z0-9]+)*$.\nIn geoepi/geoepi-hub, create projects/&lt;project_id&gt;/.\nCreate or adapt the project README.md using the project overview template.\nAdd projects/&lt;project_id&gt;/subprojects.yml, even if the initial subproject list is empty.\nAdd a Data Management Plan, controlled-data inventory, decisions record, or products record as appropriate. Not every optional project file is required on day one.\nDo not place controlled data, credentials, confidential material, or sensitive agreements directly in the Hub.\nSubmit the changes through the normal focused-branch and pull-request workflow.\n\nDo not guess at project objectives, collaborators, stewardship arrangements, access conditions, milestones, or products. Record them when someone with project knowledge can provide them.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "Projects and Subprojects"
+      "Add a Project or Subproject"
     ]
   },
   {
-    "objectID": "organization/projects-and-subprojects.html#stable-identifiers",
-    "href": "organization/projects-and-subprojects.html#stable-identifiers",
-    "title": "Projects and Subprojects",
-    "section": "Stable identifiers",
-    "text": "Stable identifiers\nproject_id and subproject_id are stable machine-readable identifiers. Use lowercase, short but understandable, hyphen-separated ASCII names with no spaces. Do not add dates unless a date is genuinely part of the scientific identity, and do not change an ID merely because a project title changes.\nFor example:\nproject_id: nws-risk\nsubproject_id: nws-bayes-risk\nsubproject_id: nws-climate-acquisition\nStable IDs may eventually connect Hub directory names, Hub registries, .geoepi.yml, GitHub Actions, analytical metadata, and computational paths where appropriate. GeoEpi is not prescribing a run ID convention yet.",
+    "objectID": "organization/add-project-or-subproject.html#add-a-new-subproject",
+    "href": "organization/add-project-or-subproject.html#add-a-new-subproject",
+    "title": "Add a Project or Subproject",
+    "section": "Add a new subproject",
+    "text": "Add a new subproject\n\nIdentify the parent project_id.\nChoose a stable lowercase subproject_id that matches the ID pattern above.\nIdentify the canonical GitHub repository. Its name may retain GitHub capitalization.\nAdd .geoepi.yml to the canonical repository.\nConfirm that project_id, subproject_id, and repository.canonical are correct in .geoepi.yml.\nAdd the same ID and canonical repository to the parent project’s projects/&lt;project_id&gt;/subprojects.yml in the Hub.\nIf the repository is private or otherwise requires App access, ensure that the geoepi-hub-reader GitHub App installation is allowed to read it.\nOpen and merge the relevant repository and Hub pull requests after validation passes.\nIf immediate synchronization is useful, manually run the Hub’s Update GeoEpi Hub Action.\nVerify that the subproject appears in the detailed status, portfolio summary, and, when applicable, attention-needed report.\n\nThe Hub uses a read-only GitHub App to retrieve .geoepi.yml from registered repositories. When a repository is registered, the App installation must be allowed to read it if it is not already included. The App has read-only Contents access and does not modify subproject repositories.\nExamples of the working arrangement include geoepi/hominivorax-geostat, geoepi/cds-datagrab, and geoepi/EpiPlume. They illustrate registration and .geoepi.yml integration, not a required scientific repository layout.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "Projects and Subprojects"
+      "Add a Project or Subproject"
     ]
   },
   {
-    "objectID": "organization/projects-and-subprojects.html#registry-metadata-and-status",
-    "href": "organization/projects-and-subprojects.html#registry-metadata-and-status",
-    "title": "Projects and Subprojects",
-    "section": "Registry, metadata, and status",
-    "text": "Registry, metadata, and status\nThe Hub registry should answer where is this subproject? The distinction is:\n\nsubprojects.yml = where the canonical subproject repository is located;\n.geoepi.yml = current portfolio-level state reported by that subproject.\n\nThe registry locates the subproject; the subproject describes its state. Keep the registry minimal and do not duplicate lead, status, current focus, milestone, or compute fields there.\nVersion 1 of .geoepi.yml uses this small status vocabulary:\n\nplanned — work is defined but not underway;\nactive — work is underway;\npaused — work is intentionally on hold;\ncomplete — the current subproject objective is complete;\narchived — the repository is retained for reference and is not active.\n\nThe file contains portfolio-level metadata only. It does not contain run records, package or environment versions, SLURM jobs, model parameters, seeds, detailed data provenance, analytical results, or validation output. Those remain in the subproject repository and/or computational environment.",
+    "objectID": "organization/add-project-or-subproject.html#common-validation-failures",
+    "href": "organization/add-project-or-subproject.html#common-validation-failures",
+    "title": "Add a Project or Subproject",
+    "section": "Common validation failures",
+    "text": "Common validation failures\n\n\n\n\n\n\n\nFailure\nCheck\n\n\n\n\nSubproject ID contains uppercase letters\nKeep project_id and subproject_id lowercase; repository capitalization is allowed.\n\n\nRegistry ID does not match .geoepi.yml\nUse the same stable IDs in both files.\n\n\nCanonical repository does not match\nMatch the owner/repository value exactly in the registry and .geoepi.yml.\n\n\n.geoepi.yml is missing\nAdd it at the root of the canonical repository.\n\n\nReader GitHub App cannot access the repository\nInclude the repository in the App installation’s allowed repositories.\n\n\n\nHub synchronization is strict: an unreadable repository or incompatible record stops generation rather than publishing a partial portfolio.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "Projects and Subprojects"
+      "Add a Project or Subproject"
     ]
   },
   {
-    "objectID": "organization/index.html",
-    "href": "organization/index.html",
-    "title": "How GeoEpi Organizes Work",
+    "objectID": "organization/project-hub.html",
+    "href": "organization/project-hub.html",
+    "title": "GeoEpi Hub",
     "section": "",
-    "text": "GeoEpi organizes work as a network rather than a single directory. The lab-level Hub provides the project portfolio and shared context. Each coherent analytical workstream has a canonical subproject repository. Computation and large data live in the appropriate computational environment, and accepted outputs move into project synthesis and dissemination systems.",
+    "text": "GeoEpi maintains a lab-level GeoEpi Hub in the GeoEpi GitHub organization. The Hub provides shared project context, data-stewardship records, canonical subproject registries, and automatically generated portfolio status. It is not an analysis repository or an HPC run registry.\nInformation stored directly in the Hub must be appropriate for everyone who has access to that repository. GitHub repository permissions generally do not provide project-folder-specific access control.",
     "crumbs": [
-      "How GeoEpi Organizes Work"
+      "How GeoEpi Organizes Work",
+      "GeoEpi Hub"
     ]
   },
   {
-    "objectID": "organization/index.html#the-vocabulary",
-    "href": "organization/index.html#the-vocabulary",
-    "title": "How GeoEpi Organizes Work",
-    "section": "The vocabulary",
-    "text": "The vocabulary\n\n\n\nTerm\nMeaning\n\n\n\n\nGeoEpi Hub\nThe future single lab-level project-management and portfolio repository in the GeoEpi GitHub organization. It holds project context and coordination.\n\n\nProject\nA broad scientific or operational objective with people, data, analytical workstreams, and products.\n\n\nSubproject\nOne independently understandable and executable analytical, software, data-acquisition, modeling, genomic, dashboard, or related workstream.\n\n\nRepository\nThe canonical Git repository for a subproject’s scientific implementation.\n\n\nRun\nOne computational execution and its parameters, environment, inputs, logs, outputs, and validation details.\n\n\nProduct\nA manuscript, report, dashboard, released dataset, operational output, or other accepted scientific result.\n\n\n\nThe hierarchy is GeoEpi Hub → Project → Subproject → Run. Products may integrate results from one or more subprojects.\nAn individual folder in the GeoEpi Hub is a project entry. The Hub is the portfolio and shared context; a project entry is one project within it.\nRead the GeoEpi Hub architecture, project and subproject guidance, and repository guidance for practical decisions.\nThe Hub is planned for a future phase. This refactor documents the architecture and provides templates; it does not create the Hub or implement cross-repository automation.",
+    "objectID": "organization/project-hub.html#what-a-project-entry-contains",
+    "href": "organization/project-hub.html#what-a-project-entry-contains",
+    "title": "GeoEpi Hub",
+    "section": "What a project entry contains",
+    "text": "What a project entry contains\nAn individual folder in the Hub is a project entry. It should make the project understandable to collaborators who do not have SCINet or HPC access. A project entry normally records:\n\nproject identity and objective;\nproject leads and collaborators;\nmilestones and major non-sensitive decisions;\nmajor deliverables and product links;\nlinks to the project Data Management Plan and controlled-data inventory;\nthe canonical subproject registry; and\nreferences to agreements or restricted resources where appropriate.\n\nThe Hub describes the project. The subproject repository describes the science. The computational environment performs the work.",
     "crumbs": [
-      "How GeoEpi Organizes Work"
+      "How GeoEpi Organizes Work",
+      "GeoEpi Hub"
+    ]
+  },
+  {
+    "objectID": "organization/project-hub.html#minimal-project-entry-structure",
+    "href": "organization/project-hub.html#minimal-project-entry-structure",
+    "title": "GeoEpi Hub",
+    "section": "Minimal project-entry structure",
+    "text": "Minimal project-entry structure\nKeep the project entry deliberately small:\nprojects/\n  nws-risk/\n    README.md\n    decisions.md\n    data/\n      data-management-plan.md\n      controlled-data-inventory.csv\n    subprojects.yml\n    products.yml\nComplex projects may add scope.md, people.md, milestones.md, or deliverables.md, but these are not required as separate files when the project README already communicates the information clearly. Use the project overview template when creating or adapting a project entry. Not every optional file is needed on day one.",
+    "crumbs": [
+      "How GeoEpi Organizes Work",
+      "GeoEpi Hub"
+    ]
+  },
+  {
+    "objectID": "organization/project-hub.html#access-boundary",
+    "href": "organization/project-hub.html#access-boundary",
+    "title": "GeoEpi Hub",
+    "section": "Access boundary",
+    "text": "Access boundary\nThe Hub should not contain controlled data themselves, credentials or tokens, sensitive personnel information, confidential partner communications, restricted agreements when repository access is too broad, or sensitive operational information inappropriate for all Hub users.\nWhere restricted material exists, record its existence and authoritative approved location when appropriate. The Hub records where restricted resources belong; it does not need to contain the restricted resources themselves. Do not invent institutional security classifications; follow the applicable agreement, security guidance, and institutional direction.",
+    "crumbs": [
+      "How GeoEpi Organizes Work",
+      "GeoEpi Hub"
+    ]
+  },
+  {
+    "objectID": "organization/project-hub.html#human-maintained-and-generated-content",
+    "href": "organization/project-hub.html#human-maintained-and-generated-content",
+    "title": "GeoEpi Hub",
+    "section": "Human-maintained and generated content",
+    "text": "Human-maintained and generated content\nThe working division is:\nprojects/                           human-maintained project records\nprojects/*/subprojects.yml          human-maintained canonical pointers\ngenerated/portfolio-summary.md      automation-owned executive view\ngenerated/attention-needed.md       automation-owned exception view\ngenerated/subproject-status.md      automation-owned detailed view\ngenerated/subproject-status.csv     automation-owned machine-readable view\nFiles beneath generated/ are built by the Hub synchronization workflow from registered repositories’ .geoepi.yml metadata. They should not normally be edited manually.\nSynchronize project state, not project content.\nRun parameters, package versions, random seeds, SLURM job IDs, input manifests, logs, output manifests, and detailed analytical decisions stay in the subproject repository or computational storage. The Hub points to canonical repositories and project context; it does not duplicate every run.\nSee Add a Project or Subproject for the operational registration procedure.",
+    "crumbs": [
+      "How GeoEpi Organizes Work",
+      "GeoEpi Hub"
+    ]
+  },
+  {
+    "objectID": "start/index.html",
+    "href": "start/index.html",
+    "title": "Start Here",
+    "section": "",
+    "text": "If you are new to a project, start with its parent project in the GeoEpi Hub. The Hub is the place to understand why the project exists, who is involved, what data stewardship matters, and what the project is expected to produce.",
+    "crumbs": [
+      "Start Here"
+    ]
+  },
+  {
+    "objectID": "start/index.html#the-quick-distinction",
+    "href": "start/index.html#the-quick-distinction",
+    "title": "Start Here",
+    "section": "The quick distinction",
+    "text": "The quick distinction\n\n\n\n\n\n\n\nPlace\nUse it for\n\n\n\n\nGeoEpi Hub\nProject context, coordination, decisions, people, milestones, products, and project-level data stewardship\n\n\nSubproject repository\nCode, documentation, analytical inputs, workflow entry points, provenance, and reproducible implementation\n\n\nAtlas / Ceres\nApproved controlled or large data, intermediate data, HPC execution, logs, temporary objects, and large outputs\n\n\nProduct or dissemination system\nManuscripts, reports, dashboards, released data, and related public or restricted outputs\n\n\n\nContinue to How GeoEpi organizes work when you need to decide where a project or subproject belongs.",
+    "crumbs": [
+      "Start Here"
     ]
   },
   {
@@ -179,78 +234,78 @@
     "text": "Start with the question you have\n\nStart Here gives the shortest path for a new or inherited project.\nHow GeoEpi organizes work explains Hub, project, subproject, repository, and run.\nData management separates the project DMP, controlled-data inventory, and analytical provenance.\nComputing and repositories explains what belongs on GitHub versus Atlas or Ceres.\nTools and collaboration describes the group’s common working tools.\nTemplates provides a small set of reusable starting points."
   },
   {
-    "objectID": "start/index.html",
-    "href": "start/index.html",
-    "title": "Start Here",
+    "objectID": "organization/index.html",
+    "href": "organization/index.html",
+    "title": "How GeoEpi Organizes Work",
     "section": "",
-    "text": "If you are new to a project, start with its parent project in the GeoEpi Hub. The Hub is the place to understand why the project exists, who is involved, what data stewardship matters, and what the project is expected to produce.",
+    "text": "GeoEpi organizes work as a network rather than a single directory. The lab-level Hub provides the project portfolio and shared context. Each coherent analytical workstream has a canonical subproject repository. Computation and large data live in the appropriate computational environment, and accepted outputs move into project synthesis and dissemination systems.",
     "crumbs": [
-      "Start Here"
+      "How GeoEpi Organizes Work"
     ]
   },
   {
-    "objectID": "start/index.html#the-quick-distinction",
-    "href": "start/index.html#the-quick-distinction",
-    "title": "Start Here",
-    "section": "The quick distinction",
-    "text": "The quick distinction\n\n\n\n\n\n\n\nPlace\nUse it for\n\n\n\n\nGeoEpi Hub\nProject context, coordination, decisions, people, milestones, products, and project-level data stewardship\n\n\nSubproject repository\nCode, documentation, analytical inputs, workflow entry points, provenance, and reproducible implementation\n\n\nAtlas / Ceres\nApproved controlled or large data, intermediate data, HPC execution, logs, temporary objects, and large outputs\n\n\nProduct or dissemination system\nManuscripts, reports, dashboards, released data, and related public or restricted outputs\n\n\n\nContinue to How GeoEpi organizes work when you need to decide where a project or subproject belongs.",
+    "objectID": "organization/index.html#the-vocabulary",
+    "href": "organization/index.html#the-vocabulary",
+    "title": "How GeoEpi Organizes Work",
+    "section": "The vocabulary",
+    "text": "The vocabulary\n\n\n\nTerm\nMeaning\n\n\n\n\nGeoEpi Hub\nThe operational lab-level project-management and portfolio repository. It holds project context, stewardship records, canonical registries, and generated portfolio status.\n\n\nProject\nA broad scientific or operational objective with people, data, analytical workstreams, and products.\n\n\nSubproject\nOne independently understandable and executable analytical, software, data-acquisition, modeling, genomic, dashboard, or related workstream.\n\n\nRepository\nThe canonical Git repository for a subproject’s scientific implementation.\n\n\nRun\nOne computational execution and its parameters, environment, inputs, logs, outputs, and validation details.\n\n\nProduct\nA manuscript, report, dashboard, released dataset, operational output, or other accepted scientific result.\n\n\n\nThe working model is GeoEpi Hub → Project → Subproject → Repository / Compute → Product. Run-level records remain with the scientific workflow and computational environment. Products may integrate results from one or more subprojects.\nAn individual folder in the GeoEpi Hub is a project entry. The Hub is the portfolio and shared context; a project entry is one project within it.\nRead the GeoEpi Hub guidance, project and subproject guidance, onboarding procedure, and repository guidance for practical decisions.",
     "crumbs": [
-      "Start Here"
+      "How GeoEpi Organizes Work"
     ]
   },
   {
-    "objectID": "organization/project-hub.html",
-    "href": "organization/project-hub.html",
-    "title": "GeoEpi Hub",
+    "objectID": "organization/projects-and-subprojects.html",
+    "href": "organization/projects-and-subprojects.html",
+    "title": "Projects and Subprojects",
     "section": "",
-    "text": "GeoEpi will ultimately maintain one lab-level GeoEpi Hub, normally within the geoepi GitHub organization. The GeoEpi Hub is a shared project-management and portfolio repository. It is not an analysis repository and not an HPC run registry.\nInformation stored directly in the GeoEpi Hub must be appropriate for everyone who has access to that repository. GitHub repository permissions generally do not provide project-folder-specific access control.",
+    "text": "A project is a broad scientific or operational objective. It may include several scientists, controlled or partner-provided data, multiple analytical workstreams, and several products.\nA subproject is an independently understandable and executable workstream. Examples include NWS climate acquisition, a Bayesian risk model, a spread simulation, genomics, or a dashboard.\nThe useful rule is approximately:\nThis is not the same as “one scientist = one repository.” A scientist may contribute to several subprojects, and a subproject may involve several scientists. Each subproject has one designated canonical working repository, even when forks, upstream repositories, or collaborator-owned repositories also exist.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "GeoEpi Hub"
+      "Projects and Subprojects"
     ]
   },
   {
-    "objectID": "organization/project-hub.html#what-a-project-entry-contains",
-    "href": "organization/project-hub.html#what-a-project-entry-contains",
-    "title": "GeoEpi Hub",
-    "section": "What a project entry contains",
-    "text": "What a project entry contains\nAn individual folder in the GeoEpi Hub is a project entry. It should make the project understandable to collaborators who do not have SCINet or HPC access. The project README or overview should normally carry:\n\nproject identity and objective;\nproject leads and collaborators;\nstatus and current milestone;\nmajor deliverables;\nlinks to the project Data Management Plan and controlled-data inventory;\ncanonical subproject repository links;\nproduct links;\nreferences to agreements or restricted resources where appropriate.\n\nThe Hub may contain project identity and objective, leads and collaborators, milestones, major non-sensitive decisions, deliverables, controlled-data metadata, Data Management Plans, canonical repository links, product links, and references to restricted resources.",
+    "objectID": "organization/projects-and-subprojects.html#where-information-belongs",
+    "href": "organization/projects-and-subprojects.html#where-information-belongs",
+    "title": "Projects and Subprojects",
+    "section": "Where information belongs",
+    "text": "Where information belongs\n\nProject level: objective, scope, roles, decisions, milestones, controlled-data stewardship, subproject registry, and products.\nSubproject level: scientific implementation, workflow entry points, public data acquisition, code, analytical provenance, and reproducibility notes.\nRun level: exact configuration and execution records for a particular analysis or computational run.\n\nUse the subproject README template and GeoEpi Version 1 .geoepi.yml template when setting up a repository. The metadata file is the current GeoEpi convention for reporting a small amount of portfolio-level state. It does not replace the README or run records.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "GeoEpi Hub"
+      "Projects and Subprojects"
     ]
   },
   {
-    "objectID": "organization/project-hub.html#minimal-project-entry-structure",
-    "href": "organization/project-hub.html#minimal-project-entry-structure",
-    "title": "GeoEpi Hub",
-    "section": "Minimal project-entry structure",
-    "text": "Minimal project-entry structure\nKeep the project entry deliberately small:\nprojects/\n  nws-risk/\n    README.md\n    decisions.md\n    data/\n      data-management-plan.md\n      controlled-data-inventory.csv\n    subprojects.yml\n    products.yml\nComplex projects may add scope.md, people.md, milestones.md, or deliverables.md, but these are not required as separate files when the project README already communicates the information clearly. Use the project overview template to shape a future project entry.",
+    "objectID": "organization/projects-and-subprojects.html#stable-identifiers",
+    "href": "organization/projects-and-subprojects.html#stable-identifiers",
+    "title": "Projects and Subprojects",
+    "section": "Stable identifiers",
+    "text": "Stable identifiers\nproject_id and subproject_id must be stable lowercase machine-readable identifiers. Use short but understandable, hyphen-separated ASCII names with no spaces. Both identifiers must match:\n^[a-z0-9]+(?:-[a-z0-9]+)*$\nDo not add dates unless a date is genuinely part of the scientific identity, and do not change an ID merely because a project title changes.\nRepository names do not need to match an identifier and may retain the capitalization used by GitHub. This is valid:\nproject_id: hpai-plume\nsubproject_id: epiplume\n\nrepository:\n  canonical: geoepi/EpiPlume\nDo not rename a GitHub repository solely to make its capitalization match a stable ID.\nStable IDs connect Hub directory names, Hub registries, .geoepi.yml, GitHub Actions, and other machine-readable references where appropriate. GeoEpi does not prescribe a universal run ID convention.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "GeoEpi Hub"
+      "Projects and Subprojects"
     ]
   },
   {
-    "objectID": "organization/project-hub.html#access-boundary",
-    "href": "organization/project-hub.html#access-boundary",
-    "title": "GeoEpi Hub",
-    "section": "Access boundary",
-    "text": "Access boundary\nThe GeoEpi Hub should not contain controlled data themselves, credentials or tokens, sensitive personnel information, confidential partner communications, restricted agreements when repository access is too broad, or sensitive operational information inappropriate for all Hub users.\nWhere restricted material exists, record its existence and authoritative approved location when appropriate. The Hub records where restricted resources belong; it does not need to contain the restricted resources themselves. Do not invent institutional security classifications; follow the applicable agreement, security guidance, and institutional direction.",
+    "objectID": "organization/projects-and-subprojects.html#registry-metadata-and-status",
+    "href": "organization/projects-and-subprojects.html#registry-metadata-and-status",
+    "title": "Projects and Subprojects",
+    "section": "Registry, metadata, and status",
+    "text": "Registry, metadata, and status\nThe Hub registry answers where is this subproject? The distinction is:\n\nsubprojects.yml = where the canonical subproject repository is located;\n.geoepi.yml = current portfolio-level state reported by that subproject.\n\nThe registry locates the subproject; the subproject describes its state. Keep the registry minimal and do not duplicate lead, status, current focus, milestone, or compute fields there.\nVersion 1 of .geoepi.yml uses this small status vocabulary:\n\nplanned — work is defined but not underway;\nactive — work is underway;\npaused — work is intentionally on hold;\ncomplete — the current subproject objective is complete;\narchived — the repository is retained for reference and is not active.\n\nA Version 1 record uses the existing fields shown in the metadata template: schema version, stable IDs, title, summary, structured lead, status, current focus, repository information, optional compute locations, and an optional next milestone. Do not add local portfolio fields to this schema.\nThe file contains portfolio-level metadata only. It does not contain run records, package or environment versions, SLURM jobs, model parameters, seeds, detailed data provenance, analytical results, or validation output. Those remain in the subproject repository and/or computational environment.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "GeoEpi Hub"
+      "Projects and Subprojects"
     ]
   },
   {
-    "objectID": "organization/project-hub.html#human-maintained-and-generated-content",
-    "href": "organization/project-hub.html#human-maintained-and-generated-content",
-    "title": "GeoEpi Hub",
-    "section": "Human-maintained and generated content",
-    "text": "Human-maintained and generated content\nThe intended future division is:\nprojects/                         human-maintained project records\nproject subprojects.yml files     human-maintained canonical pointers\ngenerated/                         automation-owned portfolio summaries\nFuture files beneath generated/ should not normally be edited manually. Examples might include generated/subproject-status.csv, generated/portfolio-summary.yml, and generated/stale-subprojects.csv. These are examples only; they are not created in this phase.\nFuture automation should follow the principle: Synchronize project state, not project content.\nRun parameters, package versions, random seeds, SLURM job IDs, input manifests, logs, output manifests, and detailed analytical decisions stay in the subproject repository or computational storage. The GeoEpi Hub points to canonical repositories and project context; it does not duplicate every run.",
+    "objectID": "organization/projects-and-subprojects.html#write-the-free-text-fields-concisely",
+    "href": "organization/projects-and-subprojects.html#write-the-free-text-fields-concisely",
+    "title": "Projects and Subprojects",
+    "section": "Write the free-text fields concisely",
+    "text": "Write the free-text fields concisely\n\ncurrent_focus\nUse current_focus for a short description of what is happening now in the subproject. Prefer one concise phrase or sentence, for example:\nProspective validation.\nAdding additional environmental variables.\nManuscript revision following reviewer comments.\nDo not use it as a complete project history.\n\n\nnext_milestone.description\nUse next_milestone.description for the next meaningful scientific, analytical, review, or delivery milestone. Describe a concrete next event or deliverable.\n\n\nnext_milestone.target\nUse next_milestone.target for the expected date of that next milestone or review point. Use an ISO date such as 2026-09-01.\nFor complete and archived subprojects, next_milestone may be omitted. For a paused subproject, use it only when there is a meaningful review, restart, reassignment, or decision date. Do not use a historical publication or completion date as a future milestone. If historical completion dates need structured representation later, handle that in a future schema discussion rather than adding a Version 1 field.\nSee Add a Project or Subproject when registering work in the operational Hub.",
     "crumbs": [
       "How GeoEpi Organizes Work",
-      "GeoEpi Hub"
+      "Projects and Subprojects"
     ]
   },
   {
@@ -258,7 +313,7 @@
     "href": "organization/repositories.html",
     "title": "Canonical Repositories",
     "section": "",
-    "text": "GeoEpi subproject repositories will normally be located in the GeoEpi GitHub organization, but the operating model also permits repositories in individual GitHub accounts, forks, external upstreams, and collaborator-owned organizations.\nEvery subproject should identify one canonical working repository. The future Hub points to that repository. It does not need to catalog every fork, mirror, or temporary branch.",
+    "text": "GeoEpi subproject repositories will normally be located in the GeoEpi GitHub organization, but the operating model also permits repositories in individual GitHub accounts, forks, external upstreams, and collaborator-owned organizations.\nEvery subproject should identify one canonical working repository. The GeoEpi Hub points to that repository through the parent project’s registry. It does not need to catalog every fork, mirror, or temporary branch.",
     "crumbs": [
       "How GeoEpi Organizes Work",
       "Canonical Repositories"
@@ -324,7 +379,7 @@
     "href": "tools/index.html",
     "title": "Tools & Collaboration",
     "section": "",
-    "text": "GeoEpi uses several complementary systems. The right tool depends on the work and the collaborators; no single programming language or interface is mandatory.\n\n\n\n\n\n\n\nTool\nCommon GeoEpi role\n\n\n\n\nGitHub and the GeoEpi organization\nCode, version control, documentation, collaboration, subproject repositories, and the future Lab Hub\n\n\nSCINet, Atlas, and Ceres\nLarge or controlled data, computation, and HPC\n\n\nOSF\nCollaborator-accessible research objects, data sharing, or project resources where appropriate\n\n\nOverleaf and LaTeX\nCollaborative manuscripts and technical documents, especially equations and complex scientific formatting\n\n\nZotero\nShared GeoEpi literature libraries; individuals may use other managers for personal workflows\n\n\nQuarto and GitHub Pages\nReproducible reports, technical documentation, websites, and notebooks\n\n\nR\nA commonly used language in GeoEpi workflows and examples, alongside other appropriate tools\n\n\n\nRead the pages for GitHub, Overleaf, Zotero, and OSF.",
+    "text": "GeoEpi uses several complementary systems. The right tool depends on the work and the collaborators; no single programming language or interface is mandatory.\n\n\n\n\n\n\n\nTool\nCommon GeoEpi role\n\n\n\n\nGitHub and the GeoEpi organization\nCode, version control, documentation, collaboration, subproject repositories, and the operational GeoEpi Hub\n\n\nSCINet, Atlas, and Ceres\nLarge or controlled data, computation, and HPC\n\n\nOSF\nCollaborator-accessible research objects, data sharing, or project resources where appropriate\n\n\nOverleaf and LaTeX\nCollaborative manuscripts and technical documents, especially equations and complex scientific formatting\n\n\nZotero\nShared GeoEpi literature libraries; individuals may use other managers for personal workflows\n\n\nQuarto and GitHub Pages\nReproducible reports, technical documentation, websites, and notebooks\n\n\nR\nA commonly used language in GeoEpi workflows and examples, alongside other appropriate tools\n\n\n\nRead the pages for GitHub, Overleaf, Zotero, and OSF.",
     "crumbs": [
       "Tools & Collaboration"
     ]

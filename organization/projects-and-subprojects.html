@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../organization/repositories.html" rel="next">
+<link href="../organization/add-project-or-subproject.html" rel="next">
 <link href="../organization/project-hub.html" rel="prev">
 <link href="../assets/images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -247,6 +247,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../organization/add-project-or-subproject.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Add a Project or Subproject</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../organization/repositories.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Canonical Repositories</span></a>
   </div>
@@ -264,6 +270,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#where-information-belongs" id="toc-where-information-belongs" class="nav-link active" data-scroll-target="#where-information-belongs">Where information belongs</a></li>
   <li><a href="#stable-identifiers" id="toc-stable-identifiers" class="nav-link" data-scroll-target="#stable-identifiers">Stable identifiers</a></li>
   <li><a href="#registry-metadata-and-status" id="toc-registry-metadata-and-status" class="nav-link" data-scroll-target="#registry-metadata-and-status">Registry, metadata, and status</a></li>
+  <li><a href="#write-the-free-text-fields-concisely" id="toc-write-the-free-text-fields-concisely" class="nav-link" data-scroll-target="#write-the-free-text-fields-concisely">Write the free-text fields concisely</a>
+  <ul class="collapse">
+  <li><a href="#current_focus" id="toc-current_focus" class="nav-link" data-scroll-target="#current_focus"><code>current_focus</code></a></li>
+  <li><a href="#next_milestone.description" id="toc-next_milestone.description" class="nav-link" data-scroll-target="#next_milestone.description"><code>next_milestone.description</code></a></li>
+  <li><a href="#next_milestone.target" id="toc-next_milestone.target" class="nav-link" data-scroll-target="#next_milestone.target"><code>next_milestone.target</code></a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/organization/projects-and-subprojects.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/organization/projects-and-subprojects.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
@@ -304,29 +316,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="where-information-belongs" class="level2">
 <h2 class="anchored" data-anchor-id="where-information-belongs">Where information belongs</h2>
 <ul>
-<li><strong>Project level:</strong> objective, scope, roles, decisions, milestones, controlled-data stewardship, and products.</li>
+<li><strong>Project level:</strong> objective, scope, roles, decisions, milestones, controlled-data stewardship, subproject registry, and products.</li>
 <li><strong>Subproject level:</strong> scientific implementation, workflow entry points, public data acquisition, code, analytical provenance, and reproducibility notes.</li>
 <li><strong>Run level:</strong> exact configuration and execution records for a particular analysis or computational run.</li>
 </ul>
-<p>Use the <a href="../templates/subproject-readme-template.md">subproject README template</a> and <a href="../templates/geoepi-metadata-template.yml">proposed Version 1 <code>.geoepi.yml</code> template</a> when setting up a repository. The metadata file is a small future convention, not a replacement for the README or run records.</p>
+<p>Use the <a href="../templates/subproject-readme-template.md">subproject README template</a> and <a href="../templates/geoepi-metadata-template.yml">GeoEpi Version 1 <code>.geoepi.yml</code> template</a> when setting up a repository. The metadata file is the current GeoEpi convention for reporting a small amount of portfolio-level state. It does not replace the README or run records.</p>
 </section>
 <section id="stable-identifiers" class="level2">
 <h2 class="anchored" data-anchor-id="stable-identifiers">Stable identifiers</h2>
-<p><code>project_id</code> and <code>subproject_id</code> are stable machine-readable identifiers. Use lowercase, short but understandable, hyphen-separated ASCII names with no spaces. Do not add dates unless a date is genuinely part of the scientific identity, and do not change an ID merely because a project title changes.</p>
-<p>For example:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project_id</span><span class="kw">:</span><span class="at"> nws-risk</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subproject_id</span><span class="kw">:</span><span class="at"> nws-bayes-risk</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">subproject_id</span><span class="kw">:</span><span class="at"> nws-climate-acquisition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Stable IDs may eventually connect Hub directory names, Hub registries, <code>.geoepi.yml</code>, GitHub Actions, analytical metadata, and computational paths where appropriate. GeoEpi is not prescribing a run ID convention yet.</p>
+<p><code>project_id</code> and <code>subproject_id</code> must be stable lowercase machine-readable identifiers. Use short but understandable, hyphen-separated ASCII names with no spaces. Both identifiers must match:</p>
+<pre class="text"><code>^[a-z0-9]+(?:-[a-z0-9]+)*$</code></pre>
+<p>Do not add dates unless a date is genuinely part of the scientific identity, and do not change an ID merely because a project title changes.</p>
+<p>Repository names do not need to match an identifier and may retain the capitalization used by GitHub. This is valid:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project_id</span><span class="kw">:</span><span class="at"> hpai-plume</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subproject_id</span><span class="kw">:</span><span class="at"> epiplume</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">repository</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">canonical</span><span class="kw">:</span><span class="at"> geoepi/EpiPlume</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Do not rename a GitHub repository solely to make its capitalization match a stable ID.</p>
+<p>Stable IDs connect Hub directory names, Hub registries, <code>.geoepi.yml</code>, GitHub Actions, and other machine-readable references where appropriate. GeoEpi does not prescribe a universal run ID convention.</p>
 </section>
 <section id="registry-metadata-and-status" class="level2">
 <h2 class="anchored" data-anchor-id="registry-metadata-and-status">Registry, metadata, and status</h2>
-<p>The Hub registry should answer <strong>where is this subproject?</strong> The distinction is:</p>
+<p>The Hub registry answers <strong>where is this subproject?</strong> The distinction is:</p>
 <ul>
 <li><code>subprojects.yml</code> = where the canonical subproject repository is located;</li>
 <li><code>.geoepi.yml</code> = current portfolio-level state reported by that subproject.</li>
 </ul>
-<p>The registry locates the subproject; the subproject describes its state. Keep the registry minimal and do not duplicate lead, status, current focus, milestone, or compute fields there.</p>
+<p><strong>The registry locates the subproject; the subproject describes its state.</strong> Keep the registry minimal and do not duplicate lead, status, current focus, milestone, or compute fields there.</p>
 <p>Version 1 of <code>.geoepi.yml</code> uses this small status vocabulary:</p>
 <ul>
 <li><code>planned</code> — work is defined but not underway;</li>
@@ -335,9 +352,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>complete</code> — the current subproject objective is complete;</li>
 <li><code>archived</code> — the repository is retained for reference and is not active.</li>
 </ul>
+<p>A Version 1 record uses the existing fields shown in the <a href="../templates/geoepi-metadata-template.yml">metadata template</a>: schema version, stable IDs, title, summary, structured lead, status, current focus, repository information, optional compute locations, and an optional next milestone. Do not add local portfolio fields to this schema.</p>
 <p>The file contains portfolio-level metadata only. It does not contain run records, package or environment versions, SLURM jobs, model parameters, seeds, detailed data provenance, analytical results, or validation output. Those remain in the subproject repository and/or computational environment.</p>
+</section>
+<section id="write-the-free-text-fields-concisely" class="level2">
+<h2 class="anchored" data-anchor-id="write-the-free-text-fields-concisely">Write the free-text fields concisely</h2>
+<section id="current_focus" class="level3">
+<h3 class="anchored" data-anchor-id="current_focus"><code>current_focus</code></h3>
+<p>Use <code>current_focus</code> for a short description of what is happening now in the subproject. Prefer one concise phrase or sentence, for example:</p>
+<pre class="text"><code>Prospective validation.
+Adding additional environmental variables.
+Manuscript revision following reviewer comments.</code></pre>
+<p>Do not use it as a complete project history.</p>
+</section>
+<section id="next_milestone.description" class="level3">
+<h3 class="anchored" data-anchor-id="next_milestone.description"><code>next_milestone.description</code></h3>
+<p>Use <code>next_milestone.description</code> for the next meaningful scientific, analytical, review, or delivery milestone. Describe a concrete next event or deliverable.</p>
+</section>
+<section id="next_milestone.target" class="level3">
+<h3 class="anchored" data-anchor-id="next_milestone.target"><code>next_milestone.target</code></h3>
+<p>Use <code>next_milestone.target</code> for the expected date of that next milestone or review point. Use an ISO date such as <code>2026-09-01</code>.</p>
+<p>For <code>complete</code> and <code>archived</code> subprojects, <code>next_milestone</code> may be omitted. For a <code>paused</code> subproject, use it only when there is a meaningful review, restart, reassignment, or decision date. Do not use a historical publication or completion date as a future milestone. If historical completion dates need structured representation later, handle that in a future schema discussion rather than adding a Version 1 field.</p>
+<p>See <a href="../organization/add-project-or-subproject.html">Add a Project or Subproject</a> when registering work in the operational Hub.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -752,8 +791,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../organization/repositories.html" class="pagination-link" aria-label="Canonical Repositories">
-        <span class="nav-page-text">Canonical Repositories</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../organization/add-project-or-subproject.html" class="pagination-link" aria-label="Add a Project or Subproject">
+        <span class="nav-page-text">Add a Project or Subproject</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
