@@ -7,6 +7,7 @@ project:
     - "organization/index.qmd"
     - "organization/project-hub.qmd"
     - "organization/projects-and-subprojects.qmd"
+    - "organization/add-project-or-subproject.qmd"
     - "organization/repositories.qmd"
     - "data/index.qmd"
     - "data/data-management-plans.qmd"
@@ -92,6 +93,7 @@ website:
         - organization/index.qmd
         - organization/project-hub.qmd
         - organization/projects-and-subprojects.qmd
+        - organization/add-project-or-subproject.qmd
         - organization/repositories.qmd
     - id: data
       title: "Data Management"

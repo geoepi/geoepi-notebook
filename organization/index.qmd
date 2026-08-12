@@ -9,17 +9,15 @@ GeoEpi organizes work as a network rather than a single directory. The lab-level
 
 | Term | Meaning |
 |---|---|
-| **GeoEpi Hub** | The future single lab-level project-management and portfolio repository in the [GeoEpi GitHub organization](https://github.com/geoepi). It holds project context and coordination. |
+| **GeoEpi Hub** | The operational lab-level [project-management and portfolio repository](https://github.com/geoepi/geoepi-hub). It holds project context, stewardship records, canonical registries, and generated portfolio status. |
 | **Project** | A broad scientific or operational objective with people, data, analytical workstreams, and products. |
 | **Subproject** | One independently understandable and executable analytical, software, data-acquisition, modeling, genomic, dashboard, or related workstream. |
 | **Repository** | The canonical Git repository for a subproject’s scientific implementation. |
 | **Run** | One computational execution and its parameters, environment, inputs, logs, outputs, and validation details. |
 | **Product** | A manuscript, report, dashboard, released dataset, operational output, or other accepted scientific result. |
 
-The hierarchy is **GeoEpi Hub → Project → Subproject → Run**. Products may integrate results from one or more subprojects.
+The working model is **GeoEpi Hub → Project → Subproject → Repository / Compute → Product**. Run-level records remain with the scientific workflow and computational environment. Products may integrate results from one or more subprojects.
 
 An individual folder in the GeoEpi Hub is a **project entry**. The Hub is the portfolio and shared context; a project entry is one project within it.
 
-Read the [GeoEpi Hub architecture](project-hub.qmd), [project and subproject guidance](projects-and-subprojects.qmd), and [repository guidance](repositories.qmd) for practical decisions.
-
-The Hub is planned for a future phase. This refactor documents the architecture and provides templates; it does not create the Hub or implement cross-repository automation.
+Read the [GeoEpi Hub guidance](project-hub.qmd), [project and subproject guidance](projects-and-subprojects.qmd), [onboarding procedure](add-project-or-subproject.qmd), and [repository guidance](repositories.qmd) for practical decisions.

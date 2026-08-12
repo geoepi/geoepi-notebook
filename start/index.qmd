@@ -3,14 +3,14 @@ title: "Start Here"
 description: "The shortest path into a GeoEpi project."
 ---
 
-If you are new to a project, start with its parent project in the GeoEpi Hub. The Hub is the place to understand why the project exists, who is involved, what data stewardship matters, and what the project is expected to produce.
+If you are new to a project, start with its parent project in the [GeoEpi Hub](https://github.com/geoepi/geoepi-hub). The Hub is the place to understand why the project exists, who is involved, what data stewardship matters, and what the project is expected to produce.
 
-1. Find the parent project in the GeoEpi Hub.
-2. Read its objective, people, controlled-data information, deliverables, and current milestone.
-3. Find or create the analytical subproject repository that matches your workstream.
+1. Find the project in the [GeoEpi Hub](https://github.com/geoepi/geoepi-hub).
+2. Read its objective, people, stewardship information, and subproject registry.
+3. Work in the appropriate canonical subproject repository.
 4. Keep scientific implementation and reproducibility information in that repository.
-5. Use Atlas or Ceres for approved large-data storage and computation.
-6. Return accepted scientific outputs to project synthesis and products.
+5. Use Atlas, Ceres, or another approved compute environment for large or controlled computation.
+6. Return accepted outputs to the project and product layer.
 
 ## The quick distinction
 

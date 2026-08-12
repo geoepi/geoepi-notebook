@@ -3,8 +3,8 @@ title: "GitHub"
 description: "Use GitHub for code, documentation, collaboration, and canonical subproject repositories."
 ---
 
-GeoEpi generally uses [GitHub](https://github.com/) for version-controlled code, documentation, issue and review discussions, collaboration, and canonical subproject repositories. The [GeoEpi organization](https://github.com/geoepi) is the normal home for lab-owned subprojects and will eventually host the lab-level Hub.
+GeoEpi generally uses [GitHub](https://github.com/) for version-controlled code, documentation, issue and review discussions, collaboration, and canonical subproject repositories. The [GeoEpi organization](https://github.com/geoepi) is the normal home for lab-owned subprojects and hosts the operational [GeoEpi Hub](https://github.com/geoepi/geoepi-hub).
 
-Repositories may also live in individual accounts, forks, external upstreams, or collaborator-owned organizations. Identify one canonical working repository for each subproject so the future Hub has a stable destination.
+Repositories may also live in individual accounts, forks, external upstreams, or collaborator-owned organizations. Identify one canonical working repository for each subproject so the Hub registry and synchronization workflow have one stable source.
 
 GitHub is not a storage system for controlled data, credentials, tokens, or large computational outputs. Use approved storage and computation environments, and link to them from the repository when appropriate.

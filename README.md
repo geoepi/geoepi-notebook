@@ -2,7 +2,7 @@
 
 This repository builds the [GeoEpi Lab Book](https://geoepi.github.io/geoepi-notebook/), a practical guide for GeoEpi scientists and collaborators.
 
-The Lab Book focuses on organizing collaborative geographical epidemiology: project and subproject structure, reproducibility, data stewardship, scientific computing, collaboration, and transferable analytical work. It documents the planned GeoEpi Hub operating model without creating the Hub or implementing cross-repository automation.
+The Lab Book focuses on organizing collaborative geographical epidemiology: project and subproject structure, reproducibility, data stewardship, scientific computing, collaboration, and transferable analytical work. It documents how to use the operational [GeoEpi Hub](https://github.com/geoepi/geoepi-hub), its Version 1 subproject metadata convention, and cross-repository portfolio synchronization.
 
 ## Render locally
 
