@@ -7,7 +7,7 @@ GeoEpi uses several complementary systems. The right tool depends on the work an
 
 | Tool | Common GeoEpi role |
 |---|---|
-| GitHub and the GeoEpi organization | Code, version control, documentation, collaboration, subproject repositories, and the future Lab Hub |
+| GitHub and the GeoEpi organization | Code, version control, documentation, collaboration, subproject repositories, and the operational GeoEpi Hub |
 | SCINet, Atlas, and Ceres | Large or controlled data, computation, and HPC |
 | OSF | Collaborator-accessible research objects, data sharing, or project resources where appropriate |
 | Overleaf and LaTeX | Collaborative manuscripts and technical documents, especially equations and complex scientific formatting |

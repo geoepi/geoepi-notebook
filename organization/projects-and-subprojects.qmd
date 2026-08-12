@@ -15,34 +15,44 @@ This is not the same as “one scientist = one repository.” A scientist may co
 
 ## Where information belongs
 
-- **Project level:** objective, scope, roles, decisions, milestones, controlled-data stewardship, and products.
+- **Project level:** objective, scope, roles, decisions, milestones, controlled-data stewardship, subproject registry, and products.
 - **Subproject level:** scientific implementation, workflow entry points, public data acquisition, code, analytical provenance, and reproducibility notes.
 - **Run level:** exact configuration and execution records for a particular analysis or computational run.
 
-Use the [subproject README template](../templates/subproject-readme-template.md) and [proposed Version 1 `.geoepi.yml` template](../templates/geoepi-metadata-template.yml) when setting up a repository. The metadata file is a small future convention, not a replacement for the README or run records.
+Use the [subproject README template](../templates/subproject-readme-template.md) and [GeoEpi Version 1 `.geoepi.yml` template](../templates/geoepi-metadata-template.yml) when setting up a repository. The metadata file is the current GeoEpi convention for reporting a small amount of portfolio-level state. It does not replace the README or run records.
 
 ## Stable identifiers
 
-`project_id` and `subproject_id` are stable machine-readable identifiers. Use lowercase, short but understandable, hyphen-separated ASCII names with no spaces. Do not add dates unless a date is genuinely part of the scientific identity, and do not change an ID merely because a project title changes.
+`project_id` and `subproject_id` must be stable lowercase machine-readable identifiers. Use short but understandable, hyphen-separated ASCII names with no spaces. Both identifiers must match:
 
-For example:
-
-```yaml
-project_id: nws-risk
-subproject_id: nws-bayes-risk
-subproject_id: nws-climate-acquisition
+```text
+^[a-z0-9]+(?:-[a-z0-9]+)*$
 ```
 
-Stable IDs may eventually connect Hub directory names, Hub registries, `.geoepi.yml`, GitHub Actions, analytical metadata, and computational paths where appropriate. GeoEpi is not prescribing a run ID convention yet.
+Do not add dates unless a date is genuinely part of the scientific identity, and do not change an ID merely because a project title changes.
+
+Repository names do not need to match an identifier and may retain the capitalization used by GitHub. This is valid:
+
+```yaml
+project_id: hpai-plume
+subproject_id: epiplume
+
+repository:
+  canonical: geoepi/EpiPlume
+```
+
+Do not rename a GitHub repository solely to make its capitalization match a stable ID.
+
+Stable IDs connect Hub directory names, Hub registries, `.geoepi.yml`, GitHub Actions, and other machine-readable references where appropriate. GeoEpi does not prescribe a universal run ID convention.
 
 ## Registry, metadata, and status
 
-The Hub registry should answer **where is this subproject?** The distinction is:
+The Hub registry answers **where is this subproject?** The distinction is:
 
 - `subprojects.yml` = where the canonical subproject repository is located;
 - `.geoepi.yml` = current portfolio-level state reported by that subproject.
 
-The registry locates the subproject; the subproject describes its state. Keep the registry minimal and do not duplicate lead, status, current focus, milestone, or compute fields there.
+**The registry locates the subproject; the subproject describes its state.** Keep the registry minimal and do not duplicate lead, status, current focus, milestone, or compute fields there.
 
 Version 1 of `.geoepi.yml` uses this small status vocabulary:
 
@@ -52,4 +62,32 @@ Version 1 of `.geoepi.yml` uses this small status vocabulary:
 - `complete` — the current subproject objective is complete;
 - `archived` — the repository is retained for reference and is not active.
 
+A Version 1 record uses the existing fields shown in the [metadata template](../templates/geoepi-metadata-template.yml): schema version, stable IDs, title, summary, structured lead, status, current focus, repository information, optional compute locations, and an optional next milestone. Do not add local portfolio fields to this schema.
+
 The file contains portfolio-level metadata only. It does not contain run records, package or environment versions, SLURM jobs, model parameters, seeds, detailed data provenance, analytical results, or validation output. Those remain in the subproject repository and/or computational environment.
+
+## Write the free-text fields concisely
+
+### `current_focus`
+
+Use `current_focus` for a short description of what is happening now in the subproject. Prefer one concise phrase or sentence, for example:
+
+```text
+Prospective validation.
+Adding additional environmental variables.
+Manuscript revision following reviewer comments.
+```
+
+Do not use it as a complete project history.
+
+### `next_milestone.description`
+
+Use `next_milestone.description` for the next meaningful scientific, analytical, review, or delivery milestone. Describe a concrete next event or deliverable.
+
+### `next_milestone.target`
+
+Use `next_milestone.target` for the expected date of that next milestone or review point. Use an ISO date such as `2026-09-01`.
+
+For `complete` and `archived` subprojects, `next_milestone` may be omitted. For a `paused` subproject, use it only when there is a meaningful review, restart, reassignment, or decision date. Do not use a historical publication or completion date as a future milestone. If historical completion dates need structured representation later, handle that in a future schema discussion rather than adding a Version 1 field.
+
+See [Add a Project or Subproject](add-project-or-subproject.qmd) when registering work in the operational Hub.

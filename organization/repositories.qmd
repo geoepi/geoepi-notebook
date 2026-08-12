@@ -5,7 +5,7 @@ description: "How a subproject repository relates to GitHub, forks, and upstream
 
 GeoEpi subproject repositories will normally be located in the [GeoEpi GitHub organization](https://github.com/geoepi), but the operating model also permits repositories in individual GitHub accounts, forks, external upstreams, and collaborator-owned organizations.
 
-Every subproject should identify one canonical working repository. The future Hub points to that repository. It does not need to catalog every fork, mirror, or temporary branch.
+Every subproject should identify one canonical working repository. The [GeoEpi Hub](https://github.com/geoepi/geoepi-hub) points to that repository through the parent project's registry. It does not need to catalog every fork, mirror, or temporary branch.
 
 ## Minimum subproject repository
 

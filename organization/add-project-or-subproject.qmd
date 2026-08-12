@@ -1,0 +1,47 @@
+---
+title: "Add a Project or Subproject"
+description: "Register new GeoEpi work in the operational Hub."
+---
+
+Use this procedure to add work to the [GeoEpi Hub](https://github.com/geoepi/geoepi-hub). The Hub describes project context and locates canonical subprojects; the subproject repository describes the science.
+
+## Add a new project
+
+1. Choose a stable lowercase `project_id` that matches `^[a-z0-9]+(?:-[a-z0-9]+)*$`.
+2. In `geoepi/geoepi-hub`, create `projects/<project_id>/`.
+3. Create or adapt the project `README.md` using the [project overview template](../templates/project-overview-template.md).
+4. Add `projects/<project_id>/subprojects.yml`, even if the initial subproject list is empty.
+5. Add a Data Management Plan, controlled-data inventory, decisions record, or products record as appropriate. Not every optional project file is required on day one.
+6. Do not place controlled data, credentials, confidential material, or sensitive agreements directly in the Hub.
+7. Submit the changes through the normal focused-branch and pull-request workflow.
+
+Do not guess at project objectives, collaborators, stewardship arrangements, access conditions, milestones, or products. Record them when someone with project knowledge can provide them.
+
+## Add a new subproject
+
+1. Identify the parent `project_id`.
+2. Choose a stable lowercase `subproject_id` that matches the ID pattern above.
+3. Identify the canonical GitHub repository. Its name may retain GitHub capitalization.
+4. Add [`.geoepi.yml`](../templates/geoepi-metadata-template.yml) to the canonical repository.
+5. Confirm that `project_id`, `subproject_id`, and `repository.canonical` are correct in `.geoepi.yml`.
+6. Add the same ID and canonical repository to the parent project's `projects/<project_id>/subprojects.yml` in the Hub.
+7. If the repository is private or otherwise requires App access, ensure that the `geoepi-hub-reader` GitHub App installation is allowed to read it.
+8. Open and merge the relevant repository and Hub pull requests after validation passes.
+9. If immediate synchronization is useful, manually run the Hub's **Update GeoEpi Hub** Action.
+10. Verify that the subproject appears in the [detailed status](https://github.com/geoepi/geoepi-hub/blob/main/generated/subproject-status.md), [portfolio summary](https://github.com/geoepi/geoepi-hub/blob/main/generated/portfolio-summary.md), and, when applicable, [attention-needed report](https://github.com/geoepi/geoepi-hub/blob/main/generated/attention-needed.md).
+
+The Hub uses a read-only GitHub App to retrieve `.geoepi.yml` from registered repositories. When a repository is registered, the App installation must be allowed to read it if it is not already included. The App has read-only Contents access and does not modify subproject repositories.
+
+Examples of the working arrangement include [geoepi/hominivorax-geostat](https://github.com/geoepi/hominivorax-geostat), [geoepi/cds-datagrab](https://github.com/geoepi/cds-datagrab), and [geoepi/EpiPlume](https://github.com/geoepi/EpiPlume). They illustrate registration and `.geoepi.yml` integration, not a required scientific repository layout.
+
+## Common validation failures
+
+| Failure | Check |
+|---|---|
+| Subproject ID contains uppercase letters | Keep `project_id` and `subproject_id` lowercase; repository capitalization is allowed. |
+| Registry ID does not match `.geoepi.yml` | Use the same stable IDs in both files. |
+| Canonical repository does not match | Match the `owner/repository` value exactly in the registry and `.geoepi.yml`. |
+| `.geoepi.yml` is missing | Add it at the root of the canonical repository. |
+| Reader GitHub App cannot access the repository | Include the repository in the App installation's allowed repositories. |
+
+Hub synchronization is strict: an unreadable repository or incompatible record stops generation rather than publishing a partial portfolio.

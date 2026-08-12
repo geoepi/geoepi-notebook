@@ -1,26 +1,25 @@
 ---
 title: "GeoEpi Hub"
-description: "What belongs in the future lab-level project portfolio."
+description: "What belongs in the operational lab-level project portfolio."
 ---
 
-GeoEpi will ultimately maintain one lab-level **GeoEpi Hub**, normally within the [geoepi GitHub organization](https://github.com/geoepi). The GeoEpi Hub is a shared project-management and portfolio repository. It is not an analysis repository and not an HPC run registry.
+GeoEpi maintains a lab-level [**GeoEpi Hub**](https://github.com/geoepi/geoepi-hub) in the GeoEpi GitHub organization. The Hub provides shared project context, data-stewardship records, canonical subproject registries, and automatically generated portfolio status. It is not an analysis repository or an HPC run registry.
 
-Information stored directly in the GeoEpi Hub must be appropriate for everyone who has access to that repository. GitHub repository permissions generally do not provide project-folder-specific access control.
+Information stored directly in the Hub must be appropriate for everyone who has access to that repository. GitHub repository permissions generally do not provide project-folder-specific access control.
 
 ## What a project entry contains
 
-An individual folder in the GeoEpi Hub is a **project entry**. It should make the project understandable to collaborators who do not have SCINet or HPC access. The project README or overview should normally carry:
+An individual folder in the Hub is a **project entry**. It should make the project understandable to collaborators who do not have SCINet or HPC access. A project entry normally records:
 
 - project identity and objective;
 - project leads and collaborators;
-- status and current milestone;
-- major deliverables;
+- milestones and major non-sensitive decisions;
+- major deliverables and product links;
 - links to the project Data Management Plan and controlled-data inventory;
-- canonical subproject repository links;
-- product links;
+- the canonical subproject registry; and
 - references to agreements or restricted resources where appropriate.
 
-The Hub may contain project identity and objective, leads and collaborators, milestones, major non-sensitive decisions, deliverables, controlled-data metadata, Data Management Plans, canonical repository links, product links, and references to restricted resources.
+The Hub describes the project. The subproject repository describes the science. The computational environment performs the work.
 
 ## Minimal project-entry structure
 
@@ -38,26 +37,31 @@ projects/
     products.yml
 ```
 
-Complex projects may add `scope.md`, `people.md`, `milestones.md`, or `deliverables.md`, but these are not required as separate files when the project README already communicates the information clearly. Use the [project overview template](../templates/project-overview-template.md) to shape a future project entry.
+Complex projects may add `scope.md`, `people.md`, `milestones.md`, or `deliverables.md`, but these are not required as separate files when the project README already communicates the information clearly. Use the [project overview template](../templates/project-overview-template.md) when creating or adapting a project entry. Not every optional file is needed on day one.
 
 ## Access boundary
 
-The GeoEpi Hub should not contain controlled data themselves, credentials or tokens, sensitive personnel information, confidential partner communications, restricted agreements when repository access is too broad, or sensitive operational information inappropriate for all Hub users.
+The Hub should not contain controlled data themselves, credentials or tokens, sensitive personnel information, confidential partner communications, restricted agreements when repository access is too broad, or sensitive operational information inappropriate for all Hub users.
 
 Where restricted material exists, record its existence and authoritative approved location when appropriate. **The Hub records where restricted resources belong; it does not need to contain the restricted resources themselves.** Do not invent institutional security classifications; follow the applicable agreement, security guidance, and institutional direction.
 
 ## Human-maintained and generated content
 
-The intended future division is:
+The working division is:
 
 ```text
-projects/                         human-maintained project records
-project subprojects.yml files     human-maintained canonical pointers
-generated/                         automation-owned portfolio summaries
+projects/                           human-maintained project records
+projects/*/subprojects.yml          human-maintained canonical pointers
+generated/portfolio-summary.md      automation-owned executive view
+generated/attention-needed.md       automation-owned exception view
+generated/subproject-status.md      automation-owned detailed view
+generated/subproject-status.csv     automation-owned machine-readable view
 ```
 
-Future files beneath `generated/` should not normally be edited manually. Examples might include `generated/subproject-status.csv`, `generated/portfolio-summary.yml`, and `generated/stale-subprojects.csv`. These are examples only; they are not created in this phase.
+Files beneath `generated/` are built by the Hub synchronization workflow from registered repositories' `.geoepi.yml` metadata. They should not normally be edited manually.
 
-Future automation should follow the principle: **Synchronize project state, not project content.**
+**Synchronize project state, not project content.**
 
-Run parameters, package versions, random seeds, SLURM job IDs, input manifests, logs, output manifests, and detailed analytical decisions stay in the subproject repository or computational storage. The GeoEpi Hub points to canonical repositories and project context; it does not duplicate every run.
+Run parameters, package versions, random seeds, SLURM job IDs, input manifests, logs, output manifests, and detailed analytical decisions stay in the subproject repository or computational storage. The Hub points to canonical repositories and project context; it does not duplicate every run.
+
+See [Add a Project or Subproject](add-project-or-subproject.qmd) for the operational registration procedure.

@@ -7,11 +7,11 @@ These templates are starting points, not a rigid project structure. Copy them in
 
 | Template | Use |
 |---|---|
-| [Project overview](project-overview-template.md) | Project context in a future GeoEpi Hub |
+| [Project overview](project-overview-template.md) | Project context in the operational GeoEpi Hub |
 | [Data Management Plan](data-management-plan-template.md) | Concise project-level data-management planning |
 | [Controlled-data inventory](controlled-data-inventory-template.csv) | Minimal project-level inventory of important controlled data |
-| [Subproject registry](subproject-registry-template.yml) | Future Hub links to canonical subproject repositories |
+| [Subproject registry](subproject-registry-template.yml) | Hub links to canonical subproject repositories |
 | [Subproject README](subproject-readme-template.md) | Orientation and reproducibility information in a subproject repository |
-| [GeoEpi metadata](geoepi-metadata-template.yml) | Proposed Version 1 portfolio metadata convention for a future `.geoepi.yml` file |
+| [GeoEpi metadata](geoepi-metadata-template.yml) | Current Version 1 portfolio metadata convention for `.geoepi.yml` |
 
-The registry and metadata files intentionally contain portfolio-level information only. `subprojects.yml` locates the canonical repository; `.geoepi.yml` reports the subproject's current portfolio state. Run metadata belongs in the subproject repository and computational storage. Future Hub automation may read these files, but cross-repository automation is not implemented here.
+The registry and metadata files intentionally contain portfolio-level information only. `subprojects.yml` locates the canonical repository; `.geoepi.yml` reports the subproject's current portfolio state. Run metadata belongs in the subproject repository and computational storage. The Hub synchronization workflow reads these files to validate registrations and generate portfolio status.
