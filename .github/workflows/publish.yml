@@ -13,6 +13,7 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.7.31
+          token: ${{ secrets.GH_PAT }}
       - name: Render site
         run: quarto render
       - uses: quarto-dev/quarto-actions/publish@v2
