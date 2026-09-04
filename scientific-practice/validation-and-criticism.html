@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Keep project stewardship, controlled-data inventory, and analytical provenance distinct.">
+<meta name="description" content="Challenge models, examine generalization, and learn from failure.">
 
-<title>Data Management – GeoEpi Lab Book</title>
+<title>Validation and Scientific Criticism – GeoEpi Lab Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../data/data-management-plans.html" rel="next">
+<link href="../scientific-practice/modeling-and-inference.html" rel="prev">
 <link href="../assets/images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -103,11 +103,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">How GeoEpi Organizes Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../scientific-practice/index.html"> 
+    <a class="nav-link active" href="../scientific-practice/index.html" aria-current="page"> 
 <span class="menu-text">Scientific Practice</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../data/index.html" aria-current="page"> 
+    <a class="nav-link" href="../data/index.html"> 
 <span class="menu-text">Data Management</span></a>
   </li>  
   <li class="nav-item">
@@ -183,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data/index.html">Data Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../scientific-practice/validation-and-criticism.html">Validation and Scientific Criticism</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -197,26 +197,26 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Data Management</span></a>
+  <a href="../scientific-practice/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scientific Practice</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/data-management-plans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Data Management Plans</span></a>
+  <a href="../scientific-practice/pattern-and-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geographical Epidemiology: Pattern and Process</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/controlled-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled-Data Inventory</span></a>
+  <a href="../scientific-practice/modeling-and-inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling and Inference</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/analytical-provenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Subproject Analytical Provenance</span></a>
+  <a href="../scientific-practice/validation-and-criticism.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Validation and Scientific Criticism</span></a>
   </div>
 </li>
     </ul>
@@ -224,20 +224,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-menu-of-challenges" id="toc-a-menu-of-challenges" class="nav-link active" data-scroll-target="#a-menu-of-challenges">A menu of challenges</a></li>
+  <li><a href="#validating-spatial-models" id="toc-validating-spatial-models" class="nav-link" data-scroll-target="#validating-spatial-models">Validating spatial models</a></li>
+  <li><a href="#model-failure-is-scientific-information" id="toc-model-failure-is-scientific-information" class="nav-link" data-scroll-target="#model-failure-is-scientific-information">Model failure is scientific information</a></li>
+  <li><a href="#a-compact-criticism-checklist" id="toc-a-compact-criticism-checklist" class="nav-link" data-scroll-target="#a-compact-criticism-checklist">A compact criticism checklist</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/scientific-practice/validation-and-criticism.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/scientific-practice/validation-and-criticism.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Management</h1>
+<h1 class="title">Validation and Scientific Criticism</h1>
 </div>
 
 <div>
   <div class="description">
-    Keep project stewardship, controlled-data inventory, and analytical provenance distinct.
+    Challenge models, examine generalization, and learn from failure.
   </div>
 </div>
 
@@ -254,7 +263,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>GeoEpi uses three related records for three different questions:</p>
+<p>A useful model should be challenged, not merely fitted. GeoEpi validation asks whether a model reproduces meaningful features of the biological system, whether it generalizes beyond the data used to build it, and where its assumptions or predictions fail.</p>
+<section id="a-menu-of-challenges" class="level2">
+<h2 class="anchored" data-anchor-id="a-menu-of-challenges">A menu of challenges</h2>
+<p>Different model types and questions call for different checks. Options include:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -262,30 +274,102 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Record</th>
-<th>Question it answers</th>
+<th>Approach</th>
+<th>What it can reveal</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Project DMP</strong></td>
-<td>How will this project manage its data?</td>
+<td>Held-out validation</td>
+<td>How performance changes on observations not used to build the model</td>
 </tr>
 <tr class="even">
-<td><strong>Controlled-data inventory</strong></td>
-<td>What important controlled or project-generated data actually exist?</td>
+<td>Spatial holdouts</td>
+<td>Whether conclusions generalize beyond sampled areas</td>
 </tr>
 <tr class="odd">
-<td><strong>Subproject analytical provenance</strong></td>
-<td>Exactly which data did this analysis use, and how were they processed?</td>
+<td>Temporal holdouts</td>
+<td>Whether a model transfers to later or different periods</td>
+</tr>
+<tr class="even">
+<td>Prospective validation</td>
+<td>How the model performs when predictions are made before outcomes are known</td>
+</tr>
+<tr class="odd">
+<td>Posterior predictive checks</td>
+<td>Whether simulated or implied observations resemble important data features</td>
+</tr>
+<tr class="even">
+<td>Simulation-based checks</td>
+<td>Whether an analysis can recover known processes or parameters under controlled data generation</td>
+</tr>
+<tr class="odd">
+<td>Sensitivity analysis and parameter perturbation</td>
+<td>Which assumptions or values carry the result</td>
+</tr>
+<tr class="even">
+<td>Scenario testing</td>
+<td>How behavior changes under plausible altered conditions</td>
+</tr>
+<tr class="odd">
+<td>Biological plausibility</td>
+<td>Whether behavior is consistent with known biology and system constraints</td>
+</tr>
+<tr class="even">
+<td>Independent data and external validation</td>
+<td>Whether support persists in data or settings outside model development</td>
+</tr>
+<tr class="odd">
+<td>Adversarial or stress-test scenarios</td>
+<td>How the model behaves under difficult but plausible conditions</td>
+</tr>
+<tr class="even">
+<td>Failure analysis</td>
+<td>What systematic errors, omissions, or boundary conditions remain</td>
 </tr>
 </tbody>
 </table>
-<p>The project DMP and controlled-data inventory belong with project context in the Hub. Analytical provenance belongs with the subproject that acquires or uses the data. Do not collapse these into one giant record, and do not require every subproject to maintain a separate formal DMP.</p>
-<p>The guiding idea is <strong>as open as possible and as restricted as necessary</strong>. Controlled, proprietary, partner-provided, sensitive, contractual, or otherwise restricted data may remain restricted.</p>
-<p>Continue to <a href="../data/data-management-plans.html">Project DMPs</a>, <a href="../data/controlled-data.html">Controlled data</a>, or <a href="../data/analytical-provenance.html">Analytical provenance</a>.</p>
+<p>These are options, not a universal checklist. A validation plan should fit the model’s intended use and retain the reasoning behind the chosen challenges.</p>
+</section>
+<section id="validating-spatial-models" class="level2">
+<h2 class="anchored" data-anchor-id="validating-spatial-models">Validating spatial models</h2>
+<p>For geographical work, useful questions include:</p>
+<ul>
+<li>Does the model reproduce observed spatial structure?</li>
+<li>Does performance collapse outside sampled areas?</li>
+<li>Are apparent clusters artifacts of effort, reporting, or detection?</li>
+<li>Are residual spatial patterns still biologically meaningful?</li>
+<li>Does the model behave sensibly across barriers, corridors, gradients, or boundaries?</li>
+<li>Are predictions driven by supported mechanisms or by extrapolation?</li>
+<li>How sensitive are results to spatial resolution and domain definition?</li>
+</ul>
+<p>Spatial validation should examine both performance and interpretation. A map that looks plausible may still reflect unsupported extrapolation, and a residual pattern may signal a missing process rather than a nuisance to discard.</p>
+</section>
+<section id="model-failure-is-scientific-information" class="level2">
+<h2 class="anchored" data-anchor-id="model-failure-is-scientific-information">Model failure is scientific information</h2>
+<blockquote class="blockquote">
+<p><strong>Model failure is scientific information.</strong></p>
+</blockquote>
+<p>Systematic failure may reveal missing processes, incorrect assumptions, scale mismatch, poor data support, observation bias, unmodeled heterogeneity, or changing system behavior. Important failures should be documented and retained rather than hidden. They can guide the next observation, experiment, model revision, or decision about whether a result is ready for use.</p>
+</section>
+<section id="a-compact-criticism-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="a-compact-criticism-checklist">A compact criticism checklist</h2>
+<p>Before treating a result as mature, ask:</p>
+<ul>
+<li>What biological claim is being made?</li>
+<li>What evidence supports it?</li>
+<li>What assumptions are carrying the result?</li>
+<li>What alternative explanation remains plausible?</li>
+<li>What happens when key assumptions are perturbed?</li>
+<li>Where does the model perform poorly?</li>
+<li>Does it extrapolate beyond observed support?</li>
+<li>Is uncertainty communicated?</li>
+<li>Would an independent scientist understand how the conclusion was reached?</li>
+</ul>
+<p>Keep validation results, important failures, and interpretation choices connected to the <a href="../data/analytical-provenance.html">analytical provenance</a>, <a href="../compute/index.html">compute and repository record</a>, and relevant project context. Reproducible criticism helps the next scientist understand not only the final result, but also why it was trusted and where caution remains.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -694,11 +778,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../scientific-practice/modeling-and-inference.html" class="pagination-link" aria-label="Modeling and Inference">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Modeling and Inference</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../data/data-management-plans.html" class="pagination-link" aria-label="Project Data Management Plans">
-        <span class="nav-page-text">Project Data Management Plans</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -706,4 +790,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/data/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/scientific-practice/validation-and-criticism.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/scientific-practice/validation-and-criticism.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>

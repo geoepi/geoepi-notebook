@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Keep project stewardship, controlled-data inventory, and analytical provenance distinct.">
+<meta name="description" content="How GeoEpi reasons from biological patterns to process, models, inference, and validation.">
 
-<title>Data Management – GeoEpi Lab Book</title>
+<title>Scientific Practice – GeoEpi Lab Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../data/data-management-plans.html" rel="next">
+<link href="../scientific-practice/pattern-and-process.html" rel="next">
 <link href="../assets/images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -70,6 +70,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -103,11 +106,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">How GeoEpi Organizes Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../scientific-practice/index.html"> 
+    <a class="nav-link active" href="../scientific-practice/index.html" aria-current="page"> 
 <span class="menu-text">Scientific Practice</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../data/index.html" aria-current="page"> 
+    <a class="nav-link" href="../data/index.html"> 
 <span class="menu-text">Data Management</span></a>
   </li>  
   <li class="nav-item">
@@ -183,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data/index.html">Data Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../scientific-practice/index.html">Scientific Practice</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -197,26 +200,26 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Data Management</span></a>
+  <a href="../scientific-practice/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Scientific Practice</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/data-management-plans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Data Management Plans</span></a>
+  <a href="../scientific-practice/pattern-and-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geographical Epidemiology: Pattern and Process</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/controlled-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled-Data Inventory</span></a>
+  <a href="../scientific-practice/modeling-and-inference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Modeling and Inference</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/analytical-provenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Subproject Analytical Provenance</span></a>
+  <a href="../scientific-practice/validation-and-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Validation and Scientific Criticism</span></a>
   </div>
 </li>
     </ul>
@@ -224,20 +227,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#a-useful-reasoning-frame" id="toc-a-useful-reasoning-frame" class="nav-link active" data-scroll-target="#a-useful-reasoning-frame">A useful reasoning frame</a></li>
+  <li><a href="#the-three-pages" id="toc-the-three-pages" class="nav-link" data-scroll-target="#the-three-pages">The three pages</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/scientific-practice/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/scientific-practice/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Management</h1>
+<h1 class="title">Scientific Practice</h1>
 </div>
 
 <div>
   <div class="description">
-    Keep project stewardship, controlled-data inventory, and analytical provenance distinct.
+    How GeoEpi reasons from biological patterns to process, models, inference, and validation.
   </div>
 </div>
 
@@ -254,38 +264,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>GeoEpi uses three related records for three different questions:</p>
+<p>GeoEpi uses geography, epidemiology, ecology, biology, and computation together to understand animal disease systems. This section describes a set of scientific habits for moving from observations to hypotheses, models, criticism, and interpretation.</p>
+<p>These pages are guiding principles, not mandatory recipes. They are intended to improve scientific reasoning and continuity across statistical, mathematical, simulation, genomic, ecological, and spatial workflows. The appropriate approach depends on the scientific question, the available evidence, the scale of the system, and the intended use of the result.</p>
+<section id="a-useful-reasoning-frame" class="level2">
+<h2 class="anchored" data-anchor-id="a-useful-reasoning-frame">A useful reasoning frame</h2>
+<p>One useful frame is:</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    O[Observation] --&gt; P[Spatial or temporal structure]
+    P --&gt; H[Candidate process]
+    H --&gt; M[Model]
+    M --&gt; C[Criticism]
+    C --&gt; I[Interpretation]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>This is not a universal linear workflow. Scientific work often moves between these activities as new observations, alternative explanations, and model failures change what should be asked next.</p>
+</section>
+<section id="the-three-pages" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-pages">The three pages</h2>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Record</th>
-<th>Question it answers</th>
+<th>Page</th>
+<th>Focus</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Project DMP</strong></td>
-<td>How will this project manage its data?</td>
+<td><a href="../scientific-practice/pattern-and-process.html">Geographical epidemiology: pattern and process</a></td>
+<td>Why geography can carry information about biological process, and how to reason from spatial signatures without treating them as proof of causation.</td>
 </tr>
 <tr class="even">
-<td><strong>Controlled-data inventory</strong></td>
-<td>What important controlled or project-generated data actually exist?</td>
+<td><a href="../scientific-practice/modeling-and-inference.html">Modeling and inference</a></td>
+<td>How models formalize questions about description, prediction, mechanism, causation, and decisions while making assumptions and uncertainty visible.</td>
 </tr>
 <tr class="odd">
-<td><strong>Subproject analytical provenance</strong></td>
-<td>Exactly which data did this analysis use, and how were they processed?</td>
+<td><a href="../scientific-practice/validation-and-criticism.html">Validation and scientific criticism</a></td>
+<td>How to challenge models, examine generalization, learn from failure, and keep validation connected to reproducibility.</td>
 </tr>
 </tbody>
 </table>
-<p>The project DMP and controlled-data inventory belong with project context in the Hub. Analytical provenance belongs with the subproject that acquires or uses the data. Do not collapse these into one giant record, and do not require every subproject to maintain a separate formal DMP.</p>
-<p>The guiding idea is <strong>as open as possible and as restricted as necessary</strong>. Controlled, proprietary, partner-provided, sensitive, contractual, or otherwise restricted data may remain restricted.</p>
-<p>Continue to <a href="../data/data-management-plans.html">Project DMPs</a>, <a href="../data/controlled-data.html">Controlled data</a>, or <a href="../data/analytical-provenance.html">Analytical provenance</a>.</p>
+<p>The scientific record also depends on the operational record. Link consequential choices to the relevant <a href="../data/analytical-provenance.html">analytical provenance</a>, <a href="../compute/index.html">compute and repository</a>, and project or subproject context described in <a href="../organization/index.html">How GeoEpi organizes work</a>. The <a href="../resources/index.html">Resources</a> page provides optional references for analytical topics.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -696,8 +726,8 @@ ul.task-list li input[type="checkbox"] {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../data/data-management-plans.html" class="pagination-link" aria-label="Project Data Management Plans">
-        <span class="nav-page-text">Project Data Management Plans</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../scientific-practice/pattern-and-process.html" class="pagination-link" aria-label="Geographical Epidemiology: Pattern and Process">
+        <span class="nav-page-text">Geographical Epidemiology: Pattern and Process</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -706,4 +736,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/data/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/scientific-practice/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/scientific-practice/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>

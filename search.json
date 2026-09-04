@@ -14,7 +14,7 @@
     "href": "about/purpose.html",
     "title": "Purpose of the Lab Book",
     "section": "",
-    "text": "The GeoEpi Lab Book is a practical guide for GeoEpi scientists and collaborators. It helps people organize collaborative, computationally intensive geographical epidemiology so that work remains understandable, scientifically defensible, reproducible where access permits, and possible to continue when people or projects change.\nIt is a living guide, not an administrative compliance manual or a substitute for scientific judgment, data-use agreements, security requirements, funder terms, or institutional policy. GeoEpi conventions are stated as conventions; stronger language is reserved for genuine scientific, security, contractual, or institutional requirements.\nThe audience includes computational scientists as well as veterinarians, microbiologists, virologists, entomologists, field epidemiologists, wildlife managers, and other domain experts. The organization should remain understandable outside HPC and command-line environments.",
+    "text": "The GeoEpi Lab Book is a practical guide for GeoEpi scientists and collaborators. It helps people organize collaborative, computationally intensive geographical epidemiology so that work remains understandable, scientifically defensible, reproducible where access permits, and possible to continue when people or projects change.\nIt is a living guide, not an administrative compliance manual or a substitute for scientific judgment, data-use agreements, security requirements, funder terms, or institutional policy. GeoEpi conventions are stated as conventions; stronger language is reserved for genuine scientific, security, contractual, or institutional requirements.\nThe Lab Book documents both how GeoEpi organizes reproducible work and the scientific habits used to reason from biological observations to models and interpretation.\nThe audience includes computational scientists as well as veterinarians, microbiologists, virologists, entomologists, field epidemiologists, wildlife managers, and other domain experts. The organization should remain understandable outside HPC and command-line environments.",
     "crumbs": [
       "Purpose of the Lab Book"
     ]
@@ -91,6 +91,102 @@
     "text": "GeoEpi uses three related records for three different questions:\n\n\n\n\n\n\n\nRecord\nQuestion it answers\n\n\n\n\nProject DMP\nHow will this project manage its data?\n\n\nControlled-data inventory\nWhat important controlled or project-generated data actually exist?\n\n\nSubproject analytical provenance\nExactly which data did this analysis use, and how were they processed?\n\n\n\nThe project DMP and controlled-data inventory belong with project context in the Hub. Analytical provenance belongs with the subproject that acquires or uses the data. Do not collapse these into one giant record, and do not require every subproject to maintain a separate formal DMP.\nThe guiding idea is as open as possible and as restricted as necessary. Controlled, proprietary, partner-provided, sensitive, contractual, or otherwise restricted data may remain restricted.\nContinue to Project DMPs, Controlled data, or Analytical provenance.",
     "crumbs": [
       "Data Management"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/modeling-and-inference.html",
+    "href": "scientific-practice/modeling-and-inference.html",
+    "title": "Modeling and Inference",
+    "section": "",
+    "text": "GeoEpi uses statistical, mathematical, simulation, genomic, and computational models to formalize hypotheses, reconstruct processes, quantify uncertainty, make predictions, and support decisions. Models are scientific instruments for asking questions about process, not primarily software or technical artifacts. The appropriate model depends on the scientific question, data, scale, and intended inference.",
+    "crumbs": [
+      "Scientific Practice",
+      "Modeling and Inference"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/modeling-and-inference.html#state-the-purpose-of-a-model",
+    "href": "scientific-practice/modeling-and-inference.html#state-the-purpose-of-a-model",
+    "title": "Modeling and Inference",
+    "section": "State the purpose of a model",
+    "text": "State the purpose of a model\nOne model may serve more than one purpose, but the intended inference should be stated explicitly.\n\n\n\n\n\n\n\nPurpose\nQuestion\n\n\n\n\nDescription\nWhat structure is present in the observations?\n\n\nPrediction\nWhat is expected at unsampled locations, future times, or under new conditions?\n\n\nMechanistic explanation\nWhat biological processes could generate the observed behavior?\n\n\nCausal inference\nWhat would change under an intervention or altered process?\n\n\nDecision support\nWhat information is useful for surveillance, control, preparedness, or operations?\n\n\n\nPredictive accuracy can be valuable without establishing a mechanism. Conversely, a mechanistic model may be useful for understanding or intervention planning even when prediction is limited by sparse observations. Keep those claims distinct.",
+    "crumbs": [
+      "Scientific Practice",
+      "Modeling and Inference"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/modeling-and-inference.html#make-assumptions-visible",
+    "href": "scientific-practice/modeling-and-inference.html#make-assumptions-visible",
+    "title": "Modeling and Inference",
+    "section": "Make assumptions visible",
+    "text": "Make assumptions visible\nImportant assumptions vary by project. Examples that may matter include:\n\nbiological state transitions and initial or boundary conditions;\ncontact structure, movement processes, and population structure;\nspatial stationarity or nonstationarity and temporal structure;\nobservation, detection, missingness, and independence assumptions;\nfunctional forms, prior distributions, and parameter identifiability;\nthe spatial, temporal, or biological scale represented by the model.\n\nThis is a prompt for judgment, not a requirement to document every item in every project. Assumptions that carry a consequential result should be understandable to collaborators and traceable to the analysis record.",
+    "crumbs": [
+      "Scientific Practice",
+      "Modeling and Inference"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/modeling-and-inference.html#compare-plausible-explanations",
+    "href": "scientific-practice/modeling-and-inference.html#compare-plausible-explanations",
+    "title": "Modeling and Inference",
+    "section": "Compare plausible explanations",
+    "text": "Compare plausible explanations\nWhen possible, formulate more than one plausible explanation for observed structure. A useful model comparison asks not only “which model fits best?” but also “which biological assumptions explain the important features of the data, and where do they fail?”\nConsider competing hypotheses, alternative mechanisms, sensitivity to assumptions, model discrepancy, and likely failure modes. A more elaborate model is not automatically a better explanation; its additional assumptions should earn their place through the question and evidence.",
+    "crumbs": [
+      "Scientific Practice",
+      "Modeling and Inference"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/modeling-and-inference.html#treat-uncertainty-as-a-result",
+    "href": "scientific-practice/modeling-and-inference.html#treat-uncertainty-as-a-result",
+    "title": "Modeling and Inference",
+    "section": "Treat uncertainty as a result",
+    "text": "Treat uncertainty as a result\nUncertainty is part of the scientific result, not merely an appendix. Depending on the question, it may be useful to distinguish:\n\n\n\n\n\n\n\nSource of uncertainty\nExample\n\n\n\n\nObservation uncertainty\nWhether an event was detected or measured accurately\n\n\nSampling uncertainty\nWhat the available sample does not represent\n\n\nParameter uncertainty\nWhich values are supported for model parameters\n\n\nStructural or model uncertainty\nWhich representation of the process is appropriate\n\n\nSpatial prediction uncertainty\nWhat is known about unsampled locations\n\n\nScenario uncertainty\nWhat may happen under a changed condition or intervention\n\n\n\nNo single statistical framework is preferred for every question. What matters is that relevant uncertainty is considered, communicated, and connected to the strength of the scientific claim.",
+    "crumbs": [
+      "Scientific Practice",
+      "Modeling and Inference"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/modeling-and-inference.html#connect-models-to-the-record",
+    "href": "scientific-practice/modeling-and-inference.html#connect-models-to-the-record",
+    "title": "Modeling and Inference",
+    "section": "Connect models to the record",
+    "text": "Connect models to the record\nDocument consequential choices, inputs, environments, and outputs in the appropriate analytical provenance and repository and compute records. The Resources page offers optional references for Bayesian modeling, causal inference, forecasting, spatial analysis, and other approaches. These links support learning; they do not prescribe a method.\nContinue to Validation and scientific criticism to consider how to challenge the model and its interpretation.",
+    "crumbs": [
+      "Scientific Practice",
+      "Modeling and Inference"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/index.html",
+    "href": "scientific-practice/index.html",
+    "title": "Scientific Practice",
+    "section": "",
+    "text": "GeoEpi uses geography, epidemiology, ecology, biology, and computation together to understand animal disease systems. This section describes a set of scientific habits for moving from observations to hypotheses, models, criticism, and interpretation.\nThese pages are guiding principles, not mandatory recipes. They are intended to improve scientific reasoning and continuity across statistical, mathematical, simulation, genomic, ecological, and spatial workflows. The appropriate approach depends on the scientific question, the available evidence, the scale of the system, and the intended use of the result.",
+    "crumbs": [
+      "Scientific Practice"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/index.html#a-useful-reasoning-frame",
+    "href": "scientific-practice/index.html#a-useful-reasoning-frame",
+    "title": "Scientific Practice",
+    "section": "A useful reasoning frame",
+    "text": "A useful reasoning frame\nOne useful frame is:\n\n\n\n\n\nflowchart LR\n    O[Observation] --&gt; P[Spatial or temporal structure]\n    P --&gt; H[Candidate process]\n    H --&gt; M[Model]\n    M --&gt; C[Criticism]\n    C --&gt; I[Interpretation]\n\n\n\n\n\n\nThis is not a universal linear workflow. Scientific work often moves between these activities as new observations, alternative explanations, and model failures change what should be asked next.",
+    "crumbs": [
+      "Scientific Practice"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/index.html#the-three-pages",
+    "href": "scientific-practice/index.html#the-three-pages",
+    "title": "Scientific Practice",
+    "section": "The three pages",
+    "text": "The three pages\n\n\n\nPage\nFocus\n\n\n\n\nGeographical epidemiology: pattern and process\nWhy geography can carry information about biological process, and how to reason from spatial signatures without treating them as proof of causation.\n\n\nModeling and inference\nHow models formalize questions about description, prediction, mechanism, causation, and decisions while making assumptions and uncertainty visible.\n\n\nValidation and scientific criticism\nHow to challenge models, examine generalization, learn from failure, and keep validation connected to reproducibility.\n\n\n\nThe scientific record also depends on the operational record. Link consequential choices to the relevant analytical provenance, compute and repository, and project or subproject context described in How GeoEpi organizes work. The Resources page provides optional references for analytical topics.",
+    "crumbs": [
+      "Scientific Practice"
     ]
   },
   {
@@ -197,7 +293,7 @@
     "href": "start/index.html",
     "title": "Start Here",
     "section": "",
-    "text": "If you are new to a project, start with its parent project in the GeoEpi Hub. The Hub is the place to understand why the project exists, who is involved, what data stewardship matters, and what the project is expected to produce.",
+    "text": "If you are new to a project, start with its parent project in the GeoEpi Hub. The Hub is the place to understand why the project exists, who is involved, what data stewardship matters, and what the project is expected to produce.\nFor a new analysis, a useful pathway is: scientific question → Scientific Practice → project or subproject setup → data → compute and repository → analysis.",
     "crumbs": [
       "Start Here"
     ]
@@ -231,7 +327,7 @@
     "href": "index.html#start-with-the-question-you-have",
     "title": "GeoEpi Lab Book",
     "section": "Start with the question you have",
-    "text": "Start with the question you have\n\nStart Here gives the shortest path for a new or inherited project.\nHow GeoEpi organizes work explains Hub, project, subproject, repository, and run.\nData management separates the project DMP, controlled-data inventory, and analytical provenance.\nComputing and repositories explains what belongs on GitHub versus Atlas or Ceres.\nTools and collaboration describes the group’s common working tools.\nTemplates provides a small set of reusable starting points."
+    "text": "Start with the question you have\n\nStart Here gives the shortest path for a new or inherited project.\nHow GeoEpi organizes work explains Hub, project, subproject, repository, and run.\nScientific Practice describes how GeoEpi reasons from observed pattern to biological process, models, inference, and validation.\nData management separates the project DMP, controlled-data inventory, and analytical provenance.\nComputing and repositories explains what belongs on GitHub versus Atlas or Ceres.\nTools and collaboration describes the group’s common working tools.\nTemplates provides a small set of reusable starting points."
   },
   {
     "objectID": "organization/index.html",
@@ -339,6 +435,116 @@
     "crumbs": [
       "How GeoEpi Organizes Work",
       "Canonical Repositories"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/pattern-and-process.html",
+    "href": "scientific-practice/pattern-and-process.html",
+    "title": "Geographical Epidemiology: Pattern and Process",
+    "section": "",
+    "text": "GeoEpi means Geographical Epidemiology, not simply “Geospatial Epidemiology.” The distinction is intentional. The name reflects an intellectual connection to the tradition of Robert MacArthur’s geographical ecology, where spatial structure, pattern, and scale can contain information about biological process.\nWe do not treat geography as the backdrop to disease. We treat it as part of the biology.\nGeography is therefore more than a way to display observations. Spatial dependence is not always nuisance correlation to be removed. Movement, dispersal, transmission, connectivity, environmental constraints, population structure, and evolutionary history can all leave spatial signatures. Those signatures can provide evidence about mechanisms and causal hypotheses, especially when combined with biological knowledge, additional observations, experiments, and models.\nSpatial structure alone does not prove causation. A cluster may reflect transmission, shared exposure, observation effort, reporting, sampling, or an unmeasured common cause. The scientific task is to compare plausible explanations and to state what the evidence can and cannot support.",
+    "crumbs": [
+      "Scientific Practice",
+      "Geographical Epidemiology: Pattern and Process"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/pattern-and-process.html#possible-spatial-signatures",
+    "href": "scientific-practice/pattern-and-process.html#possible-spatial-signatures",
+    "title": "Geographical Epidemiology: Pattern and Process",
+    "section": "Possible spatial signatures",
+    "text": "Possible spatial signatures\nDepending on the system and scale, useful signatures may include:\n\ndirectional spread, clustering, or distance decay;\nbarriers, corridors, or network-mediated spread;\nsource-sink structure and environmental gradients;\nseasonal shifts and atmospheric transport;\nhost-associated structure or genetic discontinuities.\n\nThese are clues for asking biological questions, not a catalog of required methods. The Resources page links to optional material on spatial analysis, ecology, epidemiology, network analysis, landscape genetics, and related topics.",
+    "crumbs": [
+      "Scientific Practice",
+      "Geographical Epidemiology: Pattern and Process"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/pattern-and-process.html#from-pattern-to-process",
+    "href": "scientific-practice/pattern-and-process.html#from-pattern-to-process",
+    "title": "Geographical Epidemiology: Pattern and Process",
+    "section": "From pattern to process",
+    "text": "From pattern to process\nA practical reasoning frame is:\n\nObserve a pattern.\nAsk what biological processes could generate it.\nIdentify the spatial and temporal scales at which those processes operate.\nForm competing mechanistic hypotheses.\nBuild or select models that represent those hypotheses.\nCompare model behavior with observed structure.\nEvaluate alternative explanations and artifacts.\nInterpret the pattern in light of biological knowledge and uncertainty.\n\nThe steps may be revisited or combined. Their value is in making the reasoning visible: what was observed, what process was proposed, what alternatives were considered, and what evidence changed the interpretation.",
+    "crumbs": [
+      "Scientific Practice",
+      "Geographical Epidemiology: Pattern and Process"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/pattern-and-process.html#scale-matters",
+    "href": "scientific-practice/pattern-and-process.html#scale-matters",
+    "title": "Geographical Epidemiology: Pattern and Process",
+    "section": "Scale matters",
+    "text": "Scale matters\nA process can be visible at one scale and invisible or misleading at another. Spatial resolution, temporal aggregation, sampling design, and biological scale should be considered together. A useful sequence for asking where a process might appear is:\nIndividual host → group, herd, or population → movement network → landscape → region\nCross-scale connections are often scientifically important, but they should not be assumed without evidence. A pattern at the regional scale may not identify what happened within a host or herd, and a local mechanism may not generate a detectable regional signature.",
+    "crumbs": [
+      "Scientific Practice",
+      "Geographical Epidemiology: Pattern and Process"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/pattern-and-process.html#keeping-the-reasoning-traceable",
+    "href": "scientific-practice/pattern-and-process.html#keeping-the-reasoning-traceable",
+    "title": "Geographical Epidemiology: Pattern and Process",
+    "section": "Keeping the reasoning traceable",
+    "text": "Keeping the reasoning traceable\nRecord important data, scale, model, and interpretation choices where collaborators can find them. The relevant analytical provenance and repository versus compute guidance help connect scientific reasoning to a reproducible computational record. This continuity matters when a result is revisited after time away from the project or after staff turnover.",
+    "crumbs": [
+      "Scientific Practice",
+      "Geographical Epidemiology: Pattern and Process"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/validation-and-criticism.html",
+    "href": "scientific-practice/validation-and-criticism.html",
+    "title": "Validation and Scientific Criticism",
+    "section": "",
+    "text": "A useful model should be challenged, not merely fitted. GeoEpi validation asks whether a model reproduces meaningful features of the biological system, whether it generalizes beyond the data used to build it, and where its assumptions or predictions fail.",
+    "crumbs": [
+      "Scientific Practice",
+      "Validation and Scientific Criticism"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/validation-and-criticism.html#a-menu-of-challenges",
+    "href": "scientific-practice/validation-and-criticism.html#a-menu-of-challenges",
+    "title": "Validation and Scientific Criticism",
+    "section": "A menu of challenges",
+    "text": "A menu of challenges\nDifferent model types and questions call for different checks. Options include:\n\n\n\n\n\n\n\nApproach\nWhat it can reveal\n\n\n\n\nHeld-out validation\nHow performance changes on observations not used to build the model\n\n\nSpatial holdouts\nWhether conclusions generalize beyond sampled areas\n\n\nTemporal holdouts\nWhether a model transfers to later or different periods\n\n\nProspective validation\nHow the model performs when predictions are made before outcomes are known\n\n\nPosterior predictive checks\nWhether simulated or implied observations resemble important data features\n\n\nSimulation-based checks\nWhether an analysis can recover known processes or parameters under controlled data generation\n\n\nSensitivity analysis and parameter perturbation\nWhich assumptions or values carry the result\n\n\nScenario testing\nHow behavior changes under plausible altered conditions\n\n\nBiological plausibility\nWhether behavior is consistent with known biology and system constraints\n\n\nIndependent data and external validation\nWhether support persists in data or settings outside model development\n\n\nAdversarial or stress-test scenarios\nHow the model behaves under difficult but plausible conditions\n\n\nFailure analysis\nWhat systematic errors, omissions, or boundary conditions remain\n\n\n\nThese are options, not a universal checklist. A validation plan should fit the model’s intended use and retain the reasoning behind the chosen challenges.",
+    "crumbs": [
+      "Scientific Practice",
+      "Validation and Scientific Criticism"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/validation-and-criticism.html#validating-spatial-models",
+    "href": "scientific-practice/validation-and-criticism.html#validating-spatial-models",
+    "title": "Validation and Scientific Criticism",
+    "section": "Validating spatial models",
+    "text": "Validating spatial models\nFor geographical work, useful questions include:\n\nDoes the model reproduce observed spatial structure?\nDoes performance collapse outside sampled areas?\nAre apparent clusters artifacts of effort, reporting, or detection?\nAre residual spatial patterns still biologically meaningful?\nDoes the model behave sensibly across barriers, corridors, gradients, or boundaries?\nAre predictions driven by supported mechanisms or by extrapolation?\nHow sensitive are results to spatial resolution and domain definition?\n\nSpatial validation should examine both performance and interpretation. A map that looks plausible may still reflect unsupported extrapolation, and a residual pattern may signal a missing process rather than a nuisance to discard.",
+    "crumbs": [
+      "Scientific Practice",
+      "Validation and Scientific Criticism"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/validation-and-criticism.html#model-failure-is-scientific-information",
+    "href": "scientific-practice/validation-and-criticism.html#model-failure-is-scientific-information",
+    "title": "Validation and Scientific Criticism",
+    "section": "Model failure is scientific information",
+    "text": "Model failure is scientific information\n\nModel failure is scientific information.\n\nSystematic failure may reveal missing processes, incorrect assumptions, scale mismatch, poor data support, observation bias, unmodeled heterogeneity, or changing system behavior. Important failures should be documented and retained rather than hidden. They can guide the next observation, experiment, model revision, or decision about whether a result is ready for use.",
+    "crumbs": [
+      "Scientific Practice",
+      "Validation and Scientific Criticism"
+    ]
+  },
+  {
+    "objectID": "scientific-practice/validation-and-criticism.html#a-compact-criticism-checklist",
+    "href": "scientific-practice/validation-and-criticism.html#a-compact-criticism-checklist",
+    "title": "Validation and Scientific Criticism",
+    "section": "A compact criticism checklist",
+    "text": "A compact criticism checklist\nBefore treating a result as mature, ask:\n\nWhat biological claim is being made?\nWhat evidence supports it?\nWhat assumptions are carrying the result?\nWhat alternative explanation remains plausible?\nWhat happens when key assumptions are perturbed?\nWhere does the model perform poorly?\nDoes it extrapolate beyond observed support?\nIs uncertainty communicated?\nWould an independent scientist understand how the conclusion was reached?\n\nKeep validation results, important failures, and interpretation choices connected to the analytical provenance, compute and repository record, and relevant project context. Reproducible criticism helps the next scientist understand not only the final result, but also why it was trusted and where caution remains.",
+    "crumbs": [
+      "Scientific Practice",
+      "Validation and Scientific Criticism"
     ]
   },
   {

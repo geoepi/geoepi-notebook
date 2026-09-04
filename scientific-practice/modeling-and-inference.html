@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Keep project stewardship, controlled-data inventory, and analytical provenance distinct.">
+<meta name="description" content="Use models as scientific instruments for asking questions about process, uncertainty, and decisions.">
 
-<title>Data Management – GeoEpi Lab Book</title>
+<title>Modeling and Inference – GeoEpi Lab Book</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../data/data-management-plans.html" rel="next">
+<link href="../scientific-practice/validation-and-criticism.html" rel="next">
+<link href="../scientific-practice/pattern-and-process.html" rel="prev">
 <link href="../assets/images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -103,11 +104,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">How GeoEpi Organizes Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../scientific-practice/index.html"> 
+    <a class="nav-link active" href="../scientific-practice/index.html" aria-current="page"> 
 <span class="menu-text">Scientific Practice</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../data/index.html" aria-current="page"> 
+    <a class="nav-link" href="../data/index.html"> 
 <span class="menu-text">Data Management</span></a>
   </li>  
   <li class="nav-item">
@@ -183,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../data/index.html">Data Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../scientific-practice/modeling-and-inference.html">Modeling and Inference</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -197,26 +198,26 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Data Management</span></a>
+  <a href="../scientific-practice/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scientific Practice</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/data-management-plans.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Data Management Plans</span></a>
+  <a href="../scientific-practice/pattern-and-process.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Geographical Epidemiology: Pattern and Process</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/controlled-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Controlled-Data Inventory</span></a>
+  <a href="../scientific-practice/modeling-and-inference.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Modeling and Inference</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../data/analytical-provenance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Subproject Analytical Provenance</span></a>
+  <a href="../scientific-practice/validation-and-criticism.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Validation and Scientific Criticism</span></a>
   </div>
 </li>
     </ul>
@@ -224,20 +225,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#state-the-purpose-of-a-model" id="toc-state-the-purpose-of-a-model" class="nav-link active" data-scroll-target="#state-the-purpose-of-a-model">State the purpose of a model</a></li>
+  <li><a href="#make-assumptions-visible" id="toc-make-assumptions-visible" class="nav-link" data-scroll-target="#make-assumptions-visible">Make assumptions visible</a></li>
+  <li><a href="#compare-plausible-explanations" id="toc-compare-plausible-explanations" class="nav-link" data-scroll-target="#compare-plausible-explanations">Compare plausible explanations</a></li>
+  <li><a href="#treat-uncertainty-as-a-result" id="toc-treat-uncertainty-as-a-result" class="nav-link" data-scroll-target="#treat-uncertainty-as-a-result">Treat uncertainty as a result</a></li>
+  <li><a href="#connect-models-to-the-record" id="toc-connect-models-to-the-record" class="nav-link" data-scroll-target="#connect-models-to-the-record">Connect models to the record</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/scientific-practice/modeling-and-inference.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/scientific-practice/modeling-and-inference.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Management</h1>
+<h1 class="title">Modeling and Inference</h1>
 </div>
 
 <div>
   <div class="description">
-    Keep project stewardship, controlled-data inventory, and analytical provenance distinct.
+    Use models as scientific instruments for asking questions about process, uncertainty, and decisions.
   </div>
 </div>
 
@@ -254,7 +265,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>GeoEpi uses three related records for three different questions:</p>
+<p>GeoEpi uses statistical, mathematical, simulation, genomic, and computational models to formalize hypotheses, reconstruct processes, quantify uncertainty, make predictions, and support decisions. Models are scientific instruments for asking questions about process, not primarily software or technical artifacts. The appropriate model depends on the scientific question, data, scale, and intended inference.</p>
+<section id="state-the-purpose-of-a-model" class="level2">
+<h2 class="anchored" data-anchor-id="state-the-purpose-of-a-model">State the purpose of a model</h2>
+<p>One model may serve more than one purpose, but the intended inference should be stated explicitly.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -262,30 +276,103 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Record</th>
-<th>Question it answers</th>
+<th>Purpose</th>
+<th>Question</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Project DMP</strong></td>
-<td>How will this project manage its data?</td>
+<td><strong>Description</strong></td>
+<td>What structure is present in the observations?</td>
 </tr>
 <tr class="even">
-<td><strong>Controlled-data inventory</strong></td>
-<td>What important controlled or project-generated data actually exist?</td>
+<td><strong>Prediction</strong></td>
+<td>What is expected at unsampled locations, future times, or under new conditions?</td>
 </tr>
 <tr class="odd">
-<td><strong>Subproject analytical provenance</strong></td>
-<td>Exactly which data did this analysis use, and how were they processed?</td>
+<td><strong>Mechanistic explanation</strong></td>
+<td>What biological processes could generate the observed behavior?</td>
+</tr>
+<tr class="even">
+<td><strong>Causal inference</strong></td>
+<td>What would change under an intervention or altered process?</td>
+</tr>
+<tr class="odd">
+<td><strong>Decision support</strong></td>
+<td>What information is useful for surveillance, control, preparedness, or operations?</td>
 </tr>
 </tbody>
 </table>
-<p>The project DMP and controlled-data inventory belong with project context in the Hub. Analytical provenance belongs with the subproject that acquires or uses the data. Do not collapse these into one giant record, and do not require every subproject to maintain a separate formal DMP.</p>
-<p>The guiding idea is <strong>as open as possible and as restricted as necessary</strong>. Controlled, proprietary, partner-provided, sensitive, contractual, or otherwise restricted data may remain restricted.</p>
-<p>Continue to <a href="../data/data-management-plans.html">Project DMPs</a>, <a href="../data/controlled-data.html">Controlled data</a>, or <a href="../data/analytical-provenance.html">Analytical provenance</a>.</p>
+<p>Predictive accuracy can be valuable without establishing a mechanism. Conversely, a mechanistic model may be useful for understanding or intervention planning even when prediction is limited by sparse observations. Keep those claims distinct.</p>
+</section>
+<section id="make-assumptions-visible" class="level2">
+<h2 class="anchored" data-anchor-id="make-assumptions-visible">Make assumptions visible</h2>
+<p>Important assumptions vary by project. Examples that may matter include:</p>
+<ul>
+<li>biological state transitions and initial or boundary conditions;</li>
+<li>contact structure, movement processes, and population structure;</li>
+<li>spatial stationarity or nonstationarity and temporal structure;</li>
+<li>observation, detection, missingness, and independence assumptions;</li>
+<li>functional forms, prior distributions, and parameter identifiability;</li>
+<li>the spatial, temporal, or biological scale represented by the model.</li>
+</ul>
+<p>This is a prompt for judgment, not a requirement to document every item in every project. Assumptions that carry a consequential result should be understandable to collaborators and traceable to the analysis record.</p>
+</section>
+<section id="compare-plausible-explanations" class="level2">
+<h2 class="anchored" data-anchor-id="compare-plausible-explanations">Compare plausible explanations</h2>
+<p>When possible, formulate more than one plausible explanation for observed structure. A useful model comparison asks not only “which model fits best?” but also “which biological assumptions explain the important features of the data, and where do they fail?”</p>
+<p>Consider competing hypotheses, alternative mechanisms, sensitivity to assumptions, model discrepancy, and likely failure modes. A more elaborate model is not automatically a better explanation; its additional assumptions should earn their place through the question and evidence.</p>
+</section>
+<section id="treat-uncertainty-as-a-result" class="level2">
+<h2 class="anchored" data-anchor-id="treat-uncertainty-as-a-result">Treat uncertainty as a result</h2>
+<p>Uncertainty is part of the scientific result, not merely an appendix. Depending on the question, it may be useful to distinguish:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source of uncertainty</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Observation uncertainty</td>
+<td>Whether an event was detected or measured accurately</td>
+</tr>
+<tr class="even">
+<td>Sampling uncertainty</td>
+<td>What the available sample does not represent</td>
+</tr>
+<tr class="odd">
+<td>Parameter uncertainty</td>
+<td>Which values are supported for model parameters</td>
+</tr>
+<tr class="even">
+<td>Structural or model uncertainty</td>
+<td>Which representation of the process is appropriate</td>
+</tr>
+<tr class="odd">
+<td>Spatial prediction uncertainty</td>
+<td>What is known about unsampled locations</td>
+</tr>
+<tr class="even">
+<td>Scenario uncertainty</td>
+<td>What may happen under a changed condition or intervention</td>
+</tr>
+</tbody>
+</table>
+<p>No single statistical framework is preferred for every question. What matters is that relevant uncertainty is considered, communicated, and connected to the strength of the scientific claim.</p>
+</section>
+<section id="connect-models-to-the-record" class="level2">
+<h2 class="anchored" data-anchor-id="connect-models-to-the-record">Connect models to the record</h2>
+<p>Document consequential choices, inputs, environments, and outputs in the appropriate <a href="../data/analytical-provenance.html">analytical provenance</a> and <a href="../compute/index.html">repository and compute</a> records. The <a href="../resources/index.html">Resources</a> page offers optional references for Bayesian modeling, causal inference, forecasting, spatial analysis, and other approaches. These links support learning; they do not prescribe a method.</p>
+<p>Continue to <a href="../scientific-practice/validation-and-criticism.html">Validation and scientific criticism</a> to consider how to challenge the model and its interpretation.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -694,10 +781,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../scientific-practice/pattern-and-process.html" class="pagination-link" aria-label="Geographical Epidemiology: Pattern and Process">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Geographical Epidemiology: Pattern and Process</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../data/data-management-plans.html" class="pagination-link" aria-label="Project Data Management Plans">
-        <span class="nav-page-text">Project Data Management Plans</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../scientific-practice/validation-and-criticism.html" class="pagination-link" aria-label="Validation and Scientific Criticism">
+        <span class="nav-page-text">Validation and Scientific Criticism</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -706,4 +796,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/data/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/data/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/geoepi/geoepi-notebook/edit/main/scientific-practice/modeling-and-inference.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/geoepi/geoepi-notebook/blob/main/scientific-practice/modeling-and-inference.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
