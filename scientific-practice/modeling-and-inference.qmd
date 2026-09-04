@@ -1,0 +1,60 @@
+---
+title: "Modeling and Inference"
+description: "Use models as scientific instruments for asking questions about process, uncertainty, and decisions."
+---
+
+GeoEpi uses statistical, mathematical, simulation, genomic, and computational models to formalize hypotheses, reconstruct processes, quantify uncertainty, make predictions, and support decisions. Models are scientific instruments for asking questions about process, not primarily software or technical artifacts. The appropriate model depends on the scientific question, data, scale, and intended inference.
+
+## State the purpose of a model
+
+One model may serve more than one purpose, but the intended inference should be stated explicitly.
+
+| Purpose | Question |
+|---|---|
+| **Description** | What structure is present in the observations? |
+| **Prediction** | What is expected at unsampled locations, future times, or under new conditions? |
+| **Mechanistic explanation** | What biological processes could generate the observed behavior? |
+| **Causal inference** | What would change under an intervention or altered process? |
+| **Decision support** | What information is useful for surveillance, control, preparedness, or operations? |
+
+Predictive accuracy can be valuable without establishing a mechanism. Conversely, a mechanistic model may be useful for understanding or intervention planning even when prediction is limited by sparse observations. Keep those claims distinct.
+
+## Make assumptions visible
+
+Important assumptions vary by project. Examples that may matter include:
+
+- biological state transitions and initial or boundary conditions;
+- contact structure, movement processes, and population structure;
+- spatial stationarity or nonstationarity and temporal structure;
+- observation, detection, missingness, and independence assumptions;
+- functional forms, prior distributions, and parameter identifiability;
+- the spatial, temporal, or biological scale represented by the model.
+
+This is a prompt for judgment, not a requirement to document every item in every project. Assumptions that carry a consequential result should be understandable to collaborators and traceable to the analysis record.
+
+## Compare plausible explanations
+
+When possible, formulate more than one plausible explanation for observed structure. A useful model comparison asks not only “which model fits best?” but also “which biological assumptions explain the important features of the data, and where do they fail?”
+
+Consider competing hypotheses, alternative mechanisms, sensitivity to assumptions, model discrepancy, and likely failure modes. A more elaborate model is not automatically a better explanation; its additional assumptions should earn their place through the question and evidence.
+
+## Treat uncertainty as a result
+
+Uncertainty is part of the scientific result, not merely an appendix. Depending on the question, it may be useful to distinguish:
+
+| Source of uncertainty | Example |
+|---|---|
+| Observation uncertainty | Whether an event was detected or measured accurately |
+| Sampling uncertainty | What the available sample does not represent |
+| Parameter uncertainty | Which values are supported for model parameters |
+| Structural or model uncertainty | Which representation of the process is appropriate |
+| Spatial prediction uncertainty | What is known about unsampled locations |
+| Scenario uncertainty | What may happen under a changed condition or intervention |
+
+No single statistical framework is preferred for every question. What matters is that relevant uncertainty is considered, communicated, and connected to the strength of the scientific claim.
+
+## Connect models to the record
+
+Document consequential choices, inputs, environments, and outputs in the appropriate [analytical provenance](../data/analytical-provenance.qmd) and [repository and compute](../compute/index.qmd) records. The [Resources](../resources/index.qmd) page offers optional references for Bayesian modeling, causal inference, forecasting, spatial analysis, and other approaches. These links support learning; they do not prescribe a method.
+
+Continue to [Validation and scientific criticism](validation-and-criticism.qmd) to consider how to challenge the model and its interpretation.

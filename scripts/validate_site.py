@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ACTIVE_DIRS = {"start", "organization", "data", "compute", "tools", "templates", "resources", "about"}
+ACTIVE_DIRS = {"start", "organization", "scientific-practice", "data", "compute", "tools", "templates", "resources", "about"}
 REQUIRED_TEMPLATES = {
     "project-overview-template.md",
     "data-management-plan-template.md",

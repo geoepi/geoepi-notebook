@@ -38,6 +38,7 @@ Run-level details—parameters, environments, random seeds, job IDs, logs, manif
 
 - [Start Here](start/index.qmd) gives the shortest path for a new or inherited project.
 - [How GeoEpi organizes work](organization/index.qmd) explains Hub, project, subproject, repository, and run.
+- [Scientific Practice](scientific-practice/index.qmd) describes how GeoEpi reasons from observed pattern to biological process, models, inference, and validation.
 - [Data management](data/index.qmd) separates the project DMP, controlled-data inventory, and analytical provenance.
 - [Computing and repositories](compute/index.qmd) explains what belongs on GitHub versus Atlas or Ceres.
 - [Tools and collaboration](tools/index.qmd) describes the group’s common working tools.
