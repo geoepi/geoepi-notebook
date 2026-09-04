@@ -9,6 +9,10 @@ project:
     - "organization/projects-and-subprojects.qmd"
     - "organization/add-project-or-subproject.qmd"
     - "organization/repositories.qmd"
+    - "scientific-practice/index.qmd"
+    - "scientific-practice/pattern-and-process.qmd"
+    - "scientific-practice/modeling-and-inference.qmd"
+    - "scientific-practice/validation-and-criticism.qmd"
     - "data/index.qmd"
     - "data/data-management-plans.qmd"
     - "data/controlled-data.qmd"
@@ -54,6 +58,8 @@ website:
         href: start/index.qmd
       - text: "How GeoEpi Organizes Work"
         href: organization/index.qmd
+      - text: "Scientific Practice"
+        href: scientific-practice/index.qmd
       - text: "Data Management"
         href: data/index.qmd
       - text: "Computing & Repositories"
@@ -95,6 +101,13 @@ website:
         - organization/projects-and-subprojects.qmd
         - organization/add-project-or-subproject.qmd
         - organization/repositories.qmd
+    - id: scientific-practice
+      title: "Scientific Practice"
+      contents:
+        - scientific-practice/index.qmd
+        - scientific-practice/pattern-and-process.qmd
+        - scientific-practice/modeling-and-inference.qmd
+        - scientific-practice/validation-and-criticism.qmd
     - id: data
       title: "Data Management"
       contents:

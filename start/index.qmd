@@ -12,6 +12,8 @@ If you are new to a project, start with its parent project in the [GeoEpi Hub](h
 5. Use Atlas, Ceres, or another approved compute environment for large or controlled computation.
 6. Return accepted outputs to the project and product layer.
 
+For a new analysis, a useful pathway is: scientific question → [Scientific Practice](../scientific-practice/index.qmd) → project or subproject setup → data → compute and repository → analysis.
+
 ## The quick distinction
 
 | Place | Use it for |

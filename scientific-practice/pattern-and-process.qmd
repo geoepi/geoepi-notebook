@@ -1,0 +1,53 @@
+---
+title: "Geographical Epidemiology: Pattern and Process"
+description: "How spatial structure can provide evidence about biological process in geographical epidemiology."
+---
+
+GeoEpi means **Geographical Epidemiology**, not simply “Geospatial Epidemiology.” The distinction is intentional. The name reflects an intellectual connection to the tradition of Robert MacArthur's geographical ecology, where spatial structure, pattern, and scale can contain information about biological process.
+
+We do not treat geography as the backdrop to disease. We treat it as part of the biology.
+
+> **We try to extract process from pattern.**
+
+Geography is therefore more than a way to display observations. Spatial dependence is not always nuisance correlation to be removed. Movement, dispersal, transmission, connectivity, environmental constraints, population structure, and evolutionary history can all leave spatial signatures. Those signatures can provide evidence about mechanisms and causal hypotheses, especially when combined with biological knowledge, additional observations, experiments, and models.
+
+Spatial structure alone does not prove causation. A cluster may reflect transmission, shared exposure, observation effort, reporting, sampling, or an unmeasured common cause. The scientific task is to compare plausible explanations and to state what the evidence can and cannot support.
+
+## Possible spatial signatures
+
+Depending on the system and scale, useful signatures may include:
+
+- directional spread, clustering, or distance decay;
+- barriers, corridors, or network-mediated spread;
+- source-sink structure and environmental gradients;
+- seasonal shifts and atmospheric transport;
+- host-associated structure or genetic discontinuities.
+
+These are clues for asking biological questions, not a catalog of required methods. The [Resources](../resources/index.qmd) page links to optional material on spatial analysis, ecology, epidemiology, network analysis, landscape genetics, and related topics.
+
+## From pattern to process
+
+A practical reasoning frame is:
+
+1. Observe a pattern.
+2. Ask what biological processes could generate it.
+3. Identify the spatial and temporal scales at which those processes operate.
+4. Form competing mechanistic hypotheses.
+5. Build or select models that represent those hypotheses.
+6. Compare model behavior with observed structure.
+7. Evaluate alternative explanations and artifacts.
+8. Interpret the pattern in light of biological knowledge and uncertainty.
+
+The steps may be revisited or combined. Their value is in making the reasoning visible: what was observed, what process was proposed, what alternatives were considered, and what evidence changed the interpretation.
+
+## Scale matters
+
+A process can be visible at one scale and invisible or misleading at another. Spatial resolution, temporal aggregation, sampling design, and biological scale should be considered together. A useful sequence for asking where a process might appear is:
+
+**Individual host → group, herd, or population → movement network → landscape → region**
+
+Cross-scale connections are often scientifically important, but they should not be assumed without evidence. A pattern at the regional scale may not identify what happened within a host or herd, and a local mechanism may not generate a detectable regional signature.
+
+## Keeping the reasoning traceable
+
+Record important data, scale, model, and interpretation choices where collaborators can find them. The relevant [analytical provenance](../data/analytical-provenance.qmd) and [repository versus compute guidance](../compute/repository-vs-compute.qmd) help connect scientific reasoning to a reproducible computational record. This continuity matters when a result is revisited after time away from the project or after staff turnover.

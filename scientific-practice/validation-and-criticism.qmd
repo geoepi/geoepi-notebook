@@ -1,0 +1,63 @@
+---
+title: "Validation and Scientific Criticism"
+description: "Challenge models, examine generalization, and learn from failure."
+---
+
+A useful model should be challenged, not merely fitted. GeoEpi validation asks whether a model reproduces meaningful features of the biological system, whether it generalizes beyond the data used to build it, and where its assumptions or predictions fail.
+
+## A menu of challenges
+
+Different model types and questions call for different checks. Options include:
+
+| Approach | What it can reveal |
+|---|---|
+| Held-out validation | How performance changes on observations not used to build the model |
+| Spatial holdouts | Whether conclusions generalize beyond sampled areas |
+| Temporal holdouts | Whether a model transfers to later or different periods |
+| Prospective validation | How the model performs when predictions are made before outcomes are known |
+| Posterior predictive checks | Whether simulated or implied observations resemble important data features |
+| Simulation-based checks | Whether an analysis can recover known processes or parameters under controlled data generation |
+| Sensitivity analysis and parameter perturbation | Which assumptions or values carry the result |
+| Scenario testing | How behavior changes under plausible altered conditions |
+| Biological plausibility | Whether behavior is consistent with known biology and system constraints |
+| Independent data and external validation | Whether support persists in data or settings outside model development |
+| Adversarial or stress-test scenarios | How the model behaves under difficult but plausible conditions |
+| Failure analysis | What systematic errors, omissions, or boundary conditions remain |
+
+These are options, not a universal checklist. A validation plan should fit the model's intended use and retain the reasoning behind the chosen challenges.
+
+## Validating spatial models
+
+For geographical work, useful questions include:
+
+- Does the model reproduce observed spatial structure?
+- Does performance collapse outside sampled areas?
+- Are apparent clusters artifacts of effort, reporting, or detection?
+- Are residual spatial patterns still biologically meaningful?
+- Does the model behave sensibly across barriers, corridors, gradients, or boundaries?
+- Are predictions driven by supported mechanisms or by extrapolation?
+- How sensitive are results to spatial resolution and domain definition?
+
+Spatial validation should examine both performance and interpretation. A map that looks plausible may still reflect unsupported extrapolation, and a residual pattern may signal a missing process rather than a nuisance to discard.
+
+## Model failure is scientific information
+
+> **Model failure is scientific information.**
+
+Systematic failure may reveal missing processes, incorrect assumptions, scale mismatch, poor data support, observation bias, unmodeled heterogeneity, or changing system behavior. Important failures should be documented and retained rather than hidden. They can guide the next observation, experiment, model revision, or decision about whether a result is ready for use.
+
+## A compact criticism checklist
+
+Before treating a result as mature, ask:
+
+- What biological claim is being made?
+- What evidence supports it?
+- What assumptions are carrying the result?
+- What alternative explanation remains plausible?
+- What happens when key assumptions are perturbed?
+- Where does the model perform poorly?
+- Does it extrapolate beyond observed support?
+- Is uncertainty communicated?
+- Would an independent scientist understand how the conclusion was reached?
+
+Keep validation results, important failures, and interpretation choices connected to the [analytical provenance](../data/analytical-provenance.qmd), [compute and repository record](../compute/index.qmd), and relevant project context. Reproducible criticism helps the next scientist understand not only the final result, but also why it was trusted and where caution remains.

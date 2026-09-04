@@ -1,0 +1,33 @@
+---
+title: "Scientific Practice"
+description: "How GeoEpi reasons from biological patterns to process, models, inference, and validation."
+---
+
+GeoEpi uses geography, epidemiology, ecology, biology, and computation together to understand animal disease systems. This section describes a set of scientific habits for moving from observations to hypotheses, models, criticism, and interpretation.
+
+These pages are guiding principles, not mandatory recipes. They are intended to improve scientific reasoning and continuity across statistical, mathematical, simulation, genomic, ecological, and spatial workflows. The appropriate approach depends on the scientific question, the available evidence, the scale of the system, and the intended use of the result.
+
+## A useful reasoning frame
+
+One useful frame is:
+
+```{mermaid}
+flowchart LR
+    O[Observation] --> P[Spatial or temporal structure]
+    P --> H[Candidate process]
+    H --> M[Model]
+    M --> C[Criticism]
+    C --> I[Interpretation]
+```
+
+This is not a universal linear workflow. Scientific work often moves between these activities as new observations, alternative explanations, and model failures change what should be asked next.
+
+## The three pages
+
+| Page | Focus |
+|---|---|
+| [Geographical epidemiology: pattern and process](pattern-and-process.qmd) | Why geography can carry information about biological process, and how to reason from spatial signatures without treating them as proof of causation. |
+| [Modeling and inference](modeling-and-inference.qmd) | How models formalize questions about description, prediction, mechanism, causation, and decisions while making assumptions and uncertainty visible. |
+| [Validation and scientific criticism](validation-and-criticism.qmd) | How to challenge models, examine generalization, learn from failure, and keep validation connected to reproducibility. |
+
+The scientific record also depends on the operational record. Link consequential choices to the relevant [analytical provenance](../data/analytical-provenance.qmd), [compute and repository](../compute/index.qmd), and project or subproject context described in [How GeoEpi organizes work](../organization/index.qmd). The [Resources](../resources/index.qmd) page provides optional references for analytical topics.
